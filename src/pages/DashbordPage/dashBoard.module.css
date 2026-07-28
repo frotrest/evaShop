@@ -84,12 +84,11 @@
   line-height: 23px;
   letter-spacing: 0px;
   background: transparent;
-  transition: all 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease;
   width: 200px;
 }
 
 .sidebarItem:hover {
-  font-weight: 600;
   color: #000;
   background: rgba(240, 242, 242, 1);
 }
