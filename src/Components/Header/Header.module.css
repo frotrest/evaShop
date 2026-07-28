@@ -1,0 +1,152 @@
+.header {
+  background-color: black;
+  height: 115px;
+  position: relative;
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 115px;
+  padding: 0px 27px;
+}
+
+.logo {
+  width: 94px;
+  height: 44px;
+}
+
+.headerNav {
+  display: flex;
+  align-items: baseline;
+  gap: 28px;
+}
+
+.headerLink {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #000;
+  border: 0px;
+  padding: 0px 0px 5px;
+  z-index: 20;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  position: relative;
+}
+
+.headerLink::after {
+  content: '';
+  position: absolute;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  height: 2px;
+  background-color: #eb5757;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.headerLinkActive::after {
+  transform: scaleX(1);
+}
+
+.headerLink:hover {
+  opacity: 1;
+}
+
+.headerAccountBox {
+  display: flex;
+  align-items: center;
+  height: 115px;
+  gap: 20px;
+  z-index: 3;
+}
+
+.headerAccountBoxLink {
+  display: flex;
+  gap: 12px;
+  height: 21px;
+}
+
+.like {
+  width: 20px;
+  height: 20px;
+  fill: #000;
+  cursor: pointer;
+  transition: fill 0.2s ease;
+}
+
+.likeActive {
+  fill: #ca0505;
+}
+
+.modalWindow {
+  display: flex;
+  gap: 60px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  align-items: stretch;
+  padding: 24px 0 24px 42px;
+  box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.25);
+  width: 1195px;
+  max-width: calc(100vw - 40px);
+  background-color: white;
+  z-index: 20;
+  overflow: hidden;
+}
+
+.modalWindow > img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 320px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modalBlockText {
+  width: 188px;
+}
+
+.modalBlockText > h5 {
+  color: rgba(0, 0, 0, 1);
+  font-family: 'Oswald';
+  font-style: Medium;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border-bottom: 2px solid black;
+  width: 210px;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+.modalLinkBox {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+}
+
+.modalLinkBox a {
+  background-color: transparent;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 214%;
+  color: #3f3f3f;
+  font-family: 'Oswald';
+  width: fit-content;
+  text-decoration: none;
+}
+
+p {
+  margin: 0px;
+}

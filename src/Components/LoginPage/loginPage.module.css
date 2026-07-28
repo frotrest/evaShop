@@ -1,0 +1,251 @@
+.loginPage {
+  padding-top: 15px;
+}
+
+.loginPageContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 60px;
+}
+
+.navBarLinks {
+  display: flex;
+  align-items: center;
+}
+
+.navBarItem {
+  list-style: none;
+}
+
+.navBarItemLink {
+  color: rgba(130, 130, 130, 1);
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0%;
+  transition: color 0.3s ease;
+}
+
+.navBarItem:hover .navBarItemLink {
+  color: black;
+}
+
+.navBarItem:first-child > .navBarItemLink::after {
+  content: '/';
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.loginTitle {
+  color: rgba(0, 0, 0, 1);
+  font-family: 'Oswald';
+  font-size: 48px;
+  font-weight: 400;
+  letter-spacing: 0%;
+}
+
+.formContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 100px 230px 120px 230px;
+  border: 1px solid rgba(196, 196, 196, 1);
+}
+
+.formField {
+  display: flex;
+  align-items: center;
+  width: 555px;
+}
+
+.inputBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  width: 100%;
+}
+
+.formFieldError {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  width: inherit;
+}
+
+.formCheckboxError {
+  display: flex;
+  align-items: center;
+  width: inherit;
+  gap: 10px;
+}
+
+.formFieldLabel {
+  flex: 0 0 120px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(83, 78, 78);
+  display: flex;
+  align-items: center;
+}
+
+.formFieldStar {
+  color: rgba(235, 87, 87, 1);
+  margin-left: 5px;
+}
+
+.formFieldInput {
+  flex: 1;
+  outline: none;
+  box-sizing: border-box;
+  border: 1px solid rgba(196, 196, 196, 1);
+  background: none;
+  padding: 10px 15px;
+  font-weight: 400;
+  color: rgb(83, 78, 78);
+  width: 100%;
+  color: rgba(63, 63, 63, 1);
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0%;
+  transition:
+    border 0.3s ease,
+    color 0.3s ease;
+}
+
+.formFieldInputError {
+  border: 1px solid rgba(235, 87, 87, 1);
+  color: rgba(235, 87, 87, 1);
+}
+
+.formFieldInput:focus {
+  border: 1px solid black;
+  color: black;
+}
+
+.formCheckboxInput {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #555;
+  cursor: pointer;
+  position: relative;
+  transition: border 0.3s ease;
+}
+
+.formCheckbox {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-top: 10px;
+}
+
+.formCheckboxInput:hover {
+  border: 2px solid black;
+}
+
+.formCheckboxInput:checked {
+  border: 2px solid black;
+  background-color: black;
+}
+
+.formCheckboxInput:checked::after {
+  content: '';
+  position: absolute;
+  left: 5.2px;
+  top: 0.4px;
+  width: 6px;
+  height: 12px;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  transform: rotate(45deg);
+}
+
+.formCheckboxLabel {
+  color: rgba(130, 130, 130, 1);
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0%;
+  width: 405px;
+}
+
+.formCheckboxInputError {
+  border: 2px solid rgba(235, 87, 87, 1);
+  background: none;
+}
+
+.formCheckboxLabelError {
+  color: rgba(235, 87, 87, 1) red;
+}
+
+.errorText {
+  color: rgba(235, 87, 87, 1);
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0%;
+}
+
+.formBtns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding-top: 50px;
+}
+
+.formBtnSubmit {
+  color: rgba(63, 63, 63, 1);
+  font-family: 'Oswald';
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  background: transparent;
+  border: 2px solid rgba(196, 196, 196, 1);
+  width: 335px;
+  text-align: center;
+  height: 55px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.formBtnSubmit:hover {
+  background-color: black;
+  color: white;
+  border: transparent;
+}
+
+.formBtnLink {
+  color: white;
+  font-family: 'Oswald';
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  background: black;
+  border: transparent;
+  padding: 20px 55px;
+  width: 335px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.formBtnLink:hover {
+  background-color: rgba(235, 87, 87, 1);
+}

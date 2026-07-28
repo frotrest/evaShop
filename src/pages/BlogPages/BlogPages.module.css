@@ -1,0 +1,42 @@
+.blogSection {
+  padding: 100px 0px 100px 0px;
+}
+
+.blogContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  img {
+    max-width: 560px;
+    height: 320px;
+    width: 100%;
+    border-radius: 20px;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+.contentTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  .title {
+    color: rgba(0, 0, 0, 1);
+    font-family: 'Oswald';
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 56px;
+    letter-spacing: 0%;
+    width: 420px;
+  }
+
+  .description {
+    font-size: 18px;
+    line-height: 40px;
+    color: #3f3f3f;
+    max-width: 420px;
+    font-family: 'Oswald';
+  }
+}

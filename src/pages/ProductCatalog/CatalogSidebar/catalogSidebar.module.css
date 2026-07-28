@@ -1,0 +1,211 @@
+.catalogSidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  border-right: 1px solid #c4c4c4;
+  padding-right: 28px;
+}
+
+.categoryIcon {
+  width: 12px;
+  height: auto;
+}
+
+.categoryTitle {
+  color: #000000;
+  font-family: 'Oswald';
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 0%;
+}
+
+.categoryBrand {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+}
+
+.brandsBrandWrapper {
+  height: fit-content;
+  display: flex;
+  gap: 10px;
+}
+
+.brandsBrandLabel {
+  color: #000000;
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.categoryType {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+  width: 355px;
+}
+
+.typesTypeLabel {
+  color: #3f3f3f;
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.categorySize {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.sizesSizeLabel {
+  color: #828282;
+  font-family: 'Oswald';
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: uppercase;
+  align-items: center;
+  cursor: pointer;
+  transition: color 150ms ease-in-out;
+}
+
+.sizesSize {
+  display: none;
+}
+
+.sizesSize:checked ~ .sizesSizeLabel {
+  color: #000;
+}
+
+.sizesSizeWrapper:has(.sizesSize:checked) {
+  border: 2px solid #000;
+}
+
+.sizesSizeWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #c4c4c4;
+  cursor: pointer;
+  width: 46px;
+  height: 46px;
+  transition: border 150ms ease-in-out;
+}
+
+.brandsBrandWrapper,
+.typesTypeWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 9999;
+  margin: 0px;
+}
+
+.checkmark {
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+  background-color: transparent;
+  border: 2px solid #828282;
+  box-sizing: border-box;
+  position: relative;
+  flex-shrink: 0;
+  transition: all 150ms ease-in-out;
+}
+
+.checkbox:checked ~ .checkmark {
+  background-color: #000000;
+  border-color: #000000;
+}
+
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.checkbox:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkmark:after {
+  left: 3px;
+  top: 0px;
+  width: 3px;
+  height: 6px;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%) rotate(45deg);
+}
+
+.accordion {
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+.accordion::before {
+  display: none;
+}
+
+.priceLabels {
+  display: flex;
+  justify-content: space-between;
+  color: #000000 !important;
+  font-family: Roboto, sans-serif !important;
+  font-weight: 500 !important;
+  margin-bottom: 12px !important;
+}
+
+.priceSlider {
+  color: #000000 !important;
+}
+
+.priceSlider :global(.MuiSlider-thumb) {
+  width: 4px;
+  height: 20px;
+  border-radius: 0;
+  background-color: #000000;
+}
+
+.priceSlider :global(.MuiSlider-thumb::before) {
+  display: none;
+}
+
+.priceSlider :global(.MuiSlider-track) {
+  height: 4px;
+}
+
+.priceSlider :global(.MuiSlider-rail) {
+  height: 4px;
+  background-color: #c4c4c4;
+  opacity: 1;
+}
+
+.priceValue {
+  color: #000000;
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+}

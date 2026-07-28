@@ -1,0 +1,159 @@
+.list {
+  padding-top: 65px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.listTitle {
+  color: #000000;
+  font-family: 'Oswald', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.swiper {
+  position: relative;
+  width: 100%;
+}
+
+.nav {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  display: flex;
+  gap: 5px;
+  z-index: 20;
+}
+
+.btnPrev,
+.btnNext {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border: 1px solid #d0d0d0;
+  border-radius: 0;
+  cursor: pointer;
+  font-size: 11px;
+  font-family: sans-serif;
+  color: #666666;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.btnPrev:hover,
+.btnNext:hover {
+  border-color: #000000;
+  color: #000000;
+  background-color: #f9f9f9;
+}
+
+.productCard {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.imgWrp {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.discount {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Oswald', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 5px 10px;
+  z-index: 10;
+}
+
+.category {
+  color: rgba(189, 189, 189, 1);
+  font-family: 'Oswald';
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+}
+
+.description {
+  color: rgba(0, 0, 0, 1);
+  font-family: 'Oswald';
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 27px;
+  letter-spacing: 0%;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.priceWrp {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.price {
+  color: rgba(0, 0, 0, 1);
+  font-family: 'Oswald';
+  font-style: Medium;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 33px;
+  letter-spacing: 0px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.oldPrice {
+  font-family: 'Oswald', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #999999;
+}
+
+:global(.swiper) {
+  width: 100%;
+  overflow: hidden;
+}
+
+:global(.swiper-wrapper) {
+  display: flex !important;
+}
+
+:global(.swiper-slide) {
+  height: auto;
+  flex-shrink: 0;
+  width: 348px;
+}
+
+:global(.swiper-button-disabled) {
+  opacity: 0.3 !important;
+  cursor: default !important;
+  background-color: #ffffff !important;
+  border-color: #e0e0e0 !important;
+  color: #cccccc !important;
+  pointer-events: none;
+}

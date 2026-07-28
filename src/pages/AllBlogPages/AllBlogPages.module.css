@@ -1,0 +1,51 @@
+.containerPage {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+.boxItem {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid #e0e0e0;
+  background-color: #ffffff;
+  text-decoration: none;
+  color: inherit;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  width: 340px;
+}
+
+.boxItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.photo {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.titleItem {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #111111;
+  font-family: 'Oswald';
+}
+
+.description {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #666666;
+  font-family: 'Oswald';
+}

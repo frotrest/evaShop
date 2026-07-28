@@ -1,0 +1,39 @@
+.sorting__form {
+  display: flex;
+  gap: 20px;
+}
+
+.sorting__field {
+  padding: 11px 132px 11px 11px;
+
+  color: rgba(0, 0, 0, 1);
+  font-family: Oswald;
+  font-style: Regular;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: uppercase;
+
+  border: 1px solid rgba(196, 196, 196, 1);
+
+  transition: border-color 0.2s;
+  cursor: pointer;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('@assets/ProductCatalog/arrow.svg');
+
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 10px;
+}
+
+.sorting__field2 {
+  padding-right: 44px;
+}
+
+.sorting__field:hover {
+  border: 1px solid black;
+}

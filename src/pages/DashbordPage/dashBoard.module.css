@@ -1,0 +1,225 @@
+.dashboardWrapper {
+  padding: 40px 20px;
+}
+
+.dashBoardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 15px;
+}
+
+.navBarLinks {
+  display: flex;
+  align-items: center;
+  padding-bottom: 15px;
+}
+
+.navBarItem {
+  list-style: none;
+}
+
+.navBarItemLink {
+  color: rgba(130, 130, 130, 1);
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0%;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.navBarItem:hover .navBarItemLink {
+  color: black;
+}
+
+.navBarItem:first-child > .navBarItemLink::after {
+  content: '/';
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.pageTitle {
+  color: rgba(0, 0, 0, 1);
+  font-family: 'Oswald';
+  font-size: 48px;
+  font-weight: 400;
+  letter-spacing: 0%;
+  margin-bottom: 20px;
+}
+
+.dashboardLayout {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 110px;
+  padding: 70px 200px;
+  border: 1px solid rgba(196, 196, 196, 1);
+  width: 100%;
+}
+
+.sidebar {
+  width: 290px;
+}
+
+.sidebarList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.sidebarItem {
+  padding: 20px;
+  color: rgba(130, 130, 130, 1);
+  font-family: 'Oswald';
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0px;
+  background: transparent;
+  transition: all 0.3s ease;
+  width: 200px;
+}
+
+.sidebarItem:hover {
+  font-weight: 600;
+  color: #000;
+  background: rgba(240, 242, 242, 1);
+}
+
+.sidebarItemActive {
+  font-weight: 700;
+  color: #000;
+}
+
+.contentFlex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding-top: 30px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.contentTitle {
+  color: rgba(0, 0, 0, 1);
+  font-family: 'Oswald';
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 0%;
+}
+
+.contentDescription {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.contentContact {
+  color: rgba(63, 63, 63, 1);
+  font-family: 'Oswald';
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.contentText {
+  color: rgba(130, 130, 130, 1);
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0%;
+}
+
+.contactBtns {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cardPassword {
+  max-width: 400px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 15px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.label {
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0%;
+}
+
+.input {
+  outline: none;
+  box-sizing: border-box;
+  border: 1px solid rgba(196, 196, 196, 1);
+  background: none;
+  padding: 10px 15px;
+  font-weight: 400;
+  color: rgb(83, 78, 78);
+  width: 400px;
+  color: rgba(63, 63, 63, 1);
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0%;
+  transition:
+    border 0.3s ease,
+    color 0.3s ease;
+}
+
+.input:focus {
+  border: 1px solid black;
+  color: black;
+}
+
+.formActions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn {
+  color: rgba(0, 0, 0, 1);
+  background-color: rgba(230, 241, 250, 1);
+  padding: 5px 10px;
+  font-family: 'Roboto Medium';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0%;
+  cursor: pointer;
+}

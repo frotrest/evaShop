@@ -1,0 +1,241 @@
+.registerBox {
+  padding-top: 20px;
+  padding-bottom: 60px;
+}
+
+.registerBoxContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.headerForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.breadcrumbItem {
+  color: rgba(130, 130, 130, 1);
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0%;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.breadcrumbItem:hover {
+  color: #000;
+}
+
+.title {
+  color: rgba(0, 0, 0, 1);
+  font-family: 'Oswald';
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 68px;
+  letter-spacing: 0%;
+}
+
+.dateTitle {
+  color: rgba(0, 0, 0, 1);
+  font-family: 'Oswald';
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 0%;
+}
+
+.nameInput,
+.emailInput,
+.passwordInput {
+  border: 1px solid #c4c4c4;
+  padding: 15px;
+  width: 445px;
+  transition:
+    border 0.3s ease,
+    color 0.3s ease;
+  outline: none;
+  color: rgba(63, 63, 63, 1);
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0%;
+}
+
+.nameInput:focus,
+.emailInput:focus,
+.passwordInput:focus {
+  border: 1px solid black;
+  color: black;
+}
+
+.dateEmailInputBox,
+.dateNameInputBox,
+.dateEmailPasswordInputBox {
+  display: flex;
+  align-items: center;
+  width: 606px;
+  justify-content: space-between;
+  color: rgba(63, 63, 63, 1);
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0%;
+}
+
+.nameForm,
+.emailForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.registerBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttonBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.create {
+  color: rgba(63, 63, 63, 1);
+  font-family: 'Oswald';
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  background: transparent;
+  border: 2px solid rgba(196, 196, 196, 1);
+  width: 250px;
+  text-align: center;
+  height: 55px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border 0.3s ease;
+}
+
+.create:hover {
+  background-color: black;
+  color: white;
+  border: transparent;
+}
+
+.back {
+  display: inline-block;
+  color: white;
+  border: 2px solid transparent;
+  font-family: 'Oswald';
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  background: black;
+  border: transparent;
+  padding: 20px 55px;
+  width: 250px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.back:hover {
+  background-color: rgba(235, 87, 87, 1);
+}
+
+.accountDate,
+.personDate {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.personalDataBox {
+  display: flex;
+  flex-direction: column;
+  gap: 29px;
+}
+
+.checkboxInput {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #555;
+  cursor: pointer;
+  position: relative;
+  transition: border 0.3s ease;
+}
+
+.checkboxInput:hover {
+  border: 2px solid black;
+}
+
+.checkboxInput:checked {
+  border: 2px solid black;
+  background-color: black;
+}
+
+.checkboxInput:checked::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  width: 6px;
+  height: 12px;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  transform: rotate(45deg);
+}
+
+.dateCheckInputBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(130, 130, 130, 1);
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0%;
+  cursor: pointer;
+  width: 100%;
+}
+
+.personalForms {
+  display: flex;
+  flex-direction: column;
+  gap: 61px;
+  padding: 103px 424px;
+  border: 1px solid #c4c4c4;
+}
+
+.marker {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0%;
+}
+
+.marker::after {
+  content: '*';
+  color: red;
+}

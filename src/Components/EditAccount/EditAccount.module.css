@@ -1,0 +1,141 @@
+.accountForm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  width: 100%;
+}
+
+.title {
+  color: rgba(0, 0, 0, 1);
+  font-family: 'Oswald';
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 68px;
+  letter-spacing: 0%;
+}
+
+.label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0%;
+  width: 520px;
+}
+
+.label > span {
+  color: #ff4d4f;
+}
+
+.input {
+  outline: none;
+  box-sizing: border-box;
+  border: 1px solid rgba(196, 196, 196, 1);
+  background: none;
+  padding: 10px 15px;
+  font-weight: 400;
+  color: rgb(83, 78, 78);
+  width: 400px;
+  color: rgba(63, 63, 63, 1);
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0%;
+  transition:
+    border 0.3s ease,
+    color 0.3s ease;
+}
+
+.input:focus {
+  border: 1px solid black;
+  color: black;
+}
+
+.checkboxes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.checkboxGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(130, 130, 130, 1);
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0%;
+  cursor: pointer;
+}
+
+.checkbox {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #555;
+  cursor: pointer;
+  position: relative;
+  transition: border 0.3s ease;
+}
+
+.checkbox:hover {
+  border: 2px solid black;
+}
+
+.checkbox:checked {
+  border: 2px solid black;
+  background-color: black;
+}
+
+.checkbox:checked::after {
+  content: '';
+  position: absolute;
+  left: 5.2px;
+  top: 0.4px;
+  width: 6px;
+  height: 12px;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  transform: rotate(45deg);
+}
+
+.editBtns {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.saveBtn {
+  color: rgba(255, 255, 255, 1);
+  font-family: 'Oswald';
+  font-style: Medium;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: 0.5px;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  background: black;
+  transition: background 0.3s ease;
+}
+
+.saveBtn:hover {
+  background: #ff4d4f;
+}

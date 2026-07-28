@@ -1,0 +1,140 @@
+.shopping {
+  background: url('@assets/Homepage/shopping.webp') no-repeat center / cover;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.shoppingContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.shoppingContentTitle {
+  color: rgba(0, 0, 0, 1);
+  font-family: 'Oswald';
+  font-size: 56px;
+  font-weight: 500;
+  line-height: 72px;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.shoppingContentTitle::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+  width: 95%;
+  height: 100%;
+}
+
+.shoppingContentDescription {
+  color: rgba(0, 0, 0, 1);
+  font-family: 'Roboto Light';
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 37px;
+  letter-spacing: 1%;
+  width: 640px;
+}
+
+.shoppingContentBtn {
+  color: rgba(0, 0, 0, 1);
+  font-family: 'Oswald';
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  letter-spacing: 0.5px;
+  padding: 10px 40px;
+  text-transform: uppercase;
+  background: none;
+  border: 2px solid black;
+  transition: all 0.3s ease;
+}
+
+.shoppingContentBtn:hover {
+  color: rgb(63, 58, 58);
+  border-color: rgb(63, 58, 58);
+}
+
+.traveling {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  min-height: 420px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background: url('@assets/Homepage/traveling.webp') no-repeat left center / auto;
+}
+
+.travelingContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.travelingContent::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  right: 0;
+  width: 45%;
+  height: 90px;
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+  pointer-events: none;
+}
+
+.travelingContentTitle {
+  color: rgba(0, 0, 0, 1);
+  font-family: 'Oswald';
+  font-size: 56px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-transform: uppercase;
+}
+
+.travelingContentDescription {
+  color: rgba(0, 0, 0, 1);
+  font-family: 'Roboto Light';
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  max-width: 640px;
+  width: 100%;
+  text-align: right;
+}
+
+.travelingContentBtn {
+  color: rgba(0, 0, 0, 1);
+  font-family: 'Oswald';
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  letter-spacing: 0.5px;
+  padding: 10px 40px;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: none;
+  border: 2px solid black;
+  transition: all 0.3s ease;
+}
+
+.travelingContentBtn:hover {
+  color: rgb(63, 58, 58);
+  border-color: rgb(63, 58, 58);
+}

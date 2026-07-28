@@ -1,0 +1,21 @@
+.brands-swiper {
+  border: 2px solid rgba(196, 196, 196, 1);
+  mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    black 80px,
+    black calc(100% - 80px),
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    black 80px,
+    black calc(100% - 80px),
+    transparent 100%
+  );
+}
+
+.brands-swiper .swiper-wrapper {
+  transition-timing-function: linear !important;
+}

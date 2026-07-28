@@ -1,0 +1,88 @@
+.hero {
+  background: url('@assets/Homepage/hero.webp') no-repeat center / cover;
+  margin: 20px;
+}
+
+.heroContent {
+  padding-top: 20px;
+}
+
+.swiperBlock {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+
+.swiperCardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 50px;
+}
+
+.swiperCardTitle {
+  font-family: 'Oswald';
+  font-size: 86px;
+  font-weight: 600;
+  line-height: 96px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: uppercase;
+  width: 500px;
+  position: relative;
+}
+
+.swiperCardTitle::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+  width: 95%;
+  height: 100%;
+}
+
+.discount {
+  color: transparent;
+  -webkit-text-stroke: 2px black;
+}
+
+.swiperCardBtn {
+  color: rgba(0, 0, 0, 1);
+  font-family: 'Oswald';
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  letter-spacing: 0.5px;
+  padding: 10px 40px;
+  text-transform: uppercase;
+  background: none;
+  border: 2px solid black;
+  transition: all 0.3s ease;
+}
+
+.swiperCardBtn:hover {
+  color: rgb(63, 58, 58);
+  border-color: rgb(63, 58, 58);
+}
+
+.photos {
+  position: relative;
+  padding-top: 50px;
+}
+
+.swiperCardBottom {
+  position: absolute;
+  right: -330px;
+  top: 0;
+  width: 474px;
+  height: 709px;
+  box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.25);
+}
+
+.swiperCardImg {
+  box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.25);
+  width: 416px;
+  height: 623px;
+}
