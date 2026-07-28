@@ -15,7 +15,7 @@ const buildUserInfo = (user, prev) => ({
 });
 
 const getUserSignature = (user) =>
-  `${user?.firstName || user?.name || ''}|${user?.lastName || user?.lastname || ''}|${user?.email || ''}`;
+  `${user?.firstName || user?.name || ''}|${user?.lastName || user?.lastname || ''}|${user?.email || ''}|${JSON.stringify(user?.address || '')}|${JSON.stringify(user?.shippingAddress || user?.shipping || '')}`;
 
 const DashboardPage = () => {
   const dispatch = useDispatch();
@@ -25,18 +25,23 @@ const DashboardPage = () => {
 
   const [userInfo, setUserInfo] = useState(() => buildUserInfo(currentUser));
 
+  const [addresses, setAddresses] = useState({
+    billing: currentUser?.address || null,
+    shipping: currentUser?.shippingAddress || currentUser?.shipping || currentUser?.address || null,
+  });
+
   const userSignature = getUserSignature(currentUser);
   const [prevUserSignature, setPrevUserSignature] = useState(userSignature);
 
   if (currentUser && userSignature !== prevUserSignature) {
     setPrevUserSignature(userSignature);
     setUserInfo((prev) => buildUserInfo(currentUser, prev));
+    setAddresses({
+      billing: currentUser?.address || null,
+      shipping:
+        currentUser?.shippingAddress || currentUser?.shipping || currentUser?.address || null,
+    });
   }
-
-  const [addresses, setAddresses] = useState({
-    billing: currentUser?.address || null,
-    shipping: currentUser?.shippingAddress || null,
-  });
 
   const handleUpdateAccount = async (updatedData) => {
     try {
