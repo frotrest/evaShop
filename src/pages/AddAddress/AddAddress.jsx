@@ -2,13 +2,15 @@ import React, { useState } from 'react';
 import clsx from 'clsx';
 import styles from './addAdress.module.css';
 
-const AddAddress = ({ initialData = {}, onSave, onCancel }) => {
+const AddAddress = ({ initialData, onSave, onCancel }) => {
+  const safeInitialData = initialData || {};
+
   const [addressForm, setAddressForm] = useState({
-    street: initialData.street || '',
-    city: initialData.city || '',
-    state: initialData.state || '',
-    zip: initialData.zip || '',
-    country: initialData.country || '',
+    street: safeInitialData.street || '',
+    city: safeInitialData.city || '',
+    state: safeInitialData.state || '',
+    zip: safeInitialData.zip || '',
+    country: safeInitialData.country || '',
   });
 
   const handleChange = (e) => {
@@ -27,7 +29,7 @@ const AddAddress = ({ initialData = {}, onSave, onCancel }) => {
   return (
     <div className={clsx(styles.container)}>
       <h2 className={clsx(styles.title)}>
-        {initialData?.street ? 'Edit Address' : 'Add New Address'}
+        {safeInitialData.street ? 'Edit Address' : 'Add New Address'}
       </h2>
       <form onSubmit={handleSubmit} className={clsx(styles.form)}>
         <div className={clsx(styles.formGroup)}>
@@ -41,7 +43,6 @@ const AddAddress = ({ initialData = {}, onSave, onCancel }) => {
             className={clsx(styles.input)}
           />
         </div>
-
         <div className={clsx(styles.formGroup)}>
           <label className={clsx(styles.label)}>City</label>
           <input
@@ -53,7 +54,6 @@ const AddAddress = ({ initialData = {}, onSave, onCancel }) => {
             className={clsx(styles.input)}
           />
         </div>
-
         <div className={clsx(styles.formGroup)}>
           <label className={clsx(styles.label)}>State</label>
           <input
@@ -65,7 +65,6 @@ const AddAddress = ({ initialData = {}, onSave, onCancel }) => {
             className={clsx(styles.input)}
           />
         </div>
-
         <div className={clsx(styles.formGroup)}>
           <label className={clsx(styles.label)}>Zip Code</label>
           <input
@@ -77,7 +76,6 @@ const AddAddress = ({ initialData = {}, onSave, onCancel }) => {
             className={clsx(styles.input)}
           />
         </div>
-
         <div className={clsx(styles.formGroup)}>
           <label className={clsx(styles.label)}>Country</label>
           <input
@@ -89,7 +87,6 @@ const AddAddress = ({ initialData = {}, onSave, onCancel }) => {
             className={clsx(styles.input)}
           />
         </div>
-
         <div className={clsx(styles.formActions)}>
           <button type="submit" className={clsx(styles.btn)}>
             Save Address
