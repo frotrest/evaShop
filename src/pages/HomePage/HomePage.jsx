@@ -4,7 +4,7 @@ import ProductCardList from '../../Components/ProductCard/ProductCardList.jsx';
 import ProductCardSwiper from '../../Components/ProductCard/ProductCardSwiper.jsx';
 import Header from '/src/Components/Header/Header.jsx';
 import Hero from '../../Components/Hero/Hero';
-import OfferCard from '../../Components/Offercards/Offercards.jsx';
+import OfferCard from '../../Components/Offercards/OfferCards.jsx';
 import ShopFilters from '../../Components/ShopFilters/ShopFilters.jsx';
 import Brands from '../../Components/Brands/Brands.jsx';
 import { Shopping, Traveling } from '../../Components/Posters/Posters.jsx';
