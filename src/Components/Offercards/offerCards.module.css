@@ -28,15 +28,15 @@
 }
 
 .offerCardFirst {
-  background: url('@assets/Homepage/appearance.webp') no-repeat center / cover;
+  background: url('@assets/HomePage/appearance.webp') no-repeat center / cover;
 }
 
 .offerCardSecond {
-  background: url('@assets/Homepage/style.webp') no-repeat center / cover;
+  background: url('@assets/HomePage/style.webp') no-repeat center / cover;
 }
 
 .offerCardThird {
-  background: url('@assets/Homepage/discount.webp') no-repeat center / cover;
+  background: url('@assets/HomePage/discount.webp') no-repeat center / cover;
 }
 
 .offerCardContent {

@@ -1,5 +1,5 @@
 .shopping {
-  background: url('@assets/Homepage/shopping.webp') no-repeat center / cover;
+  background: url('@assets/HomePage/shopping.webp') no-repeat center / cover;
   margin-left: 20px;
   margin-right: 20px;
   padding-top: 80px;
@@ -74,7 +74,7 @@
   margin-right: 20px;
   padding-top: 80px;
   padding-bottom: 80px;
-  background: url('@assets/Homepage/traveling.webp') no-repeat left center / auto;
+  background: url('@assets/HomePage/traveling.webp') no-repeat left center / auto;
 }
 
 .travelingContent {
