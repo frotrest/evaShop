@@ -1,5 +1,5 @@
 # EvaShop — spectacular shop 
-**EvaShop** is a qualitative, interactive website of the internet shop, designed with an accent on the clear user's inferface, high-perfomance and smooth customer's experience.
+**EvaShop** is a qualitative, interactive website of the eCommerce shop, designed with an accent on the clear user's inferface, high-perfomance and smooth customer's experience.
 
 ---
 
