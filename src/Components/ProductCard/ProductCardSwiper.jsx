@@ -22,7 +22,7 @@ const ProductCardSwiper = ({ swiperId = 'default' }) => {
     const fetchProducts = async () => {
       try {
         const response = await axios.get('https://crisp-project-server.onrender.com/products');
-        setProducts(response.data.slice(0, 8));
+        setProducts(response.data.slice(0, 20));
       } catch (err) {
         setError(err.message);
       } finally {
@@ -64,8 +64,27 @@ const ProductCardSwiper = ({ swiperId = 'default' }) => {
           pauseOnMouseEnter: true,
         }}
         breakpoints={{
-          640: { slidesPerView: 2, spaceBetween: 20, slidesPerGroup: 2 },
-          1024: { slidesPerView: 5, spaceBetween: 31, slidesPerGroup: 2 },
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 15,
+          },
+          380: {
+            slidesPerView: 2,
+            spaceBetween: 15,
+          },
+          480: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+          },
+          1280: {
+            slidesPerView: 6,
+            spaceBetween: 40,
+            speed: 1000,
+          },
         }}
         navigation={{
           nextEl: `.${nextClass}`,

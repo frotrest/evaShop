@@ -58,6 +58,7 @@
   align-items: flex-start;
   gap: 10px;
   overflow-y: auto;
+  flex-wrap: wrap;
 }
 
 .thumbBtn {
@@ -99,7 +100,6 @@
 
 .galleryMain :global(.swiper-slide) {
   display: flex;
-  justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
@@ -107,7 +107,6 @@
 
 .galleryMain img {
   width: 100%;
-  height: 100%;
   object-fit: cover;
   display: block;
 }
@@ -564,4 +563,213 @@
 
 .retryBtn:hover {
   background-color: rgba(235, 87, 87, 1);
+}
+
+@media (max-width: 1280px) {
+  .productPage {
+    gap: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .productContainer {
+    flex-direction: column;
+  }
+
+  .productGalleryWrapper {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .galleryMain {
+    width: 100%;
+    height: 320px;
+    max-width: 320px;
+    overflow: hidden;
+  }
+
+  .galleryThumbs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .productInfoWrapper {
+    padding-top: 0px;
+    max-width: 280px;
+  }
+
+  .productTitle {
+    font-size: 32px;
+    line-height: 1.3;
+    max-width: 280px;
+  }
+
+  .accordionBody {
+    width: 100%;
+  }
+
+  .galleryMain img {
+    width: 280px;
+    height: 100%;
+  }
+
+  .description {
+    width: 280px;
+  }
+
+  .actionButtons {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .productContainer {
+    flex-direction: column;
+  }
+
+  .productGalleryWrapper {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .galleryMain {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .galleryThumbs {
+    flex-direction: row;
+    height: auto;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .thumbBtn {
+    width: 64px;
+    height: 82px;
+    flex-shrink: 0;
+  }
+
+  .productInfoWrapper {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .productTitle {
+    font-size: 26px;
+    line-height: 1.35;
+  }
+
+  .brand {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .productManagement {
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .sizeGrid {
+    width: 100%;
+  }
+
+  .sizeBtn {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    font-size: 12px;
+  }
+
+  .quantityControl {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .priceValue {
+    font-size: 22px;
+    line-height: 1.4;
+    flex-wrap: wrap;
+  }
+
+  .actionButtons {
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .addToBag,
+  .saveBtn {
+    width: 140px;
+    padding: 15px 20px;
+  }
+
+  .productPageExtraInformation {
+    padding: 20px;
+  }
+
+  .productPageExtraInformationTitle {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .accordionButton {
+    font-size: 16px;
+    padding: 15px 4px;
+  }
+
+  .accordionButton::after {
+    font-size: 22px;
+  }
+
+  .accordionBody {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .productPage {
+    gap: 24px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .galleryMain {
+    height: 360px;
+  }
+
+  .thumbBtn {
+    width: 56px;
+    height: 72px;
+  }
+
+  .productTitle {
+    font-size: 22px;
+  }
+
+  .breadcrumb {
+    flex-wrap: wrap;
+  }
+
+  .breadcrumbItem,
+  .separator {
+    font-size: 12px;
+  }
+
+  .quantityBtn {
+    width: 26px;
+    height: 26px;
+    font-size: 20px;
+  }
 }

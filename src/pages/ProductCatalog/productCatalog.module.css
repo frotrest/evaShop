@@ -17,3 +17,37 @@
   margin-bottom: 0px;
   padding-right: 35px;
 }
+
+@media (max-width: 1280px) {
+  .productCatalogWrapper {
+    padding: 40px;
+    gap: 30px;
+  }
+
+  .sortingWrapper {
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .productCatalogWrapper {
+    flex-direction: column;
+    padding: 24px;
+    gap: 24px;
+  }
+
+  .productCatalogMain {
+    gap: 16px;
+  }
+
+  .sortingWrapper {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .productCatalogWrapper {
+    padding: 16px;
+    gap: 16px;
+  }
+}

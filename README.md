@@ -30,3 +30,5 @@
 
 ### Style Encapsulation
 * **CSS Modules & clsx:** Strict layout modularity with scoped component styles, preventing global scope pollution and achieving predictable component rendering.
+
+* **Framer-motion Animations:** Optimized micro-interactions via the Framer motion library.

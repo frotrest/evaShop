@@ -1,6 +1,6 @@
 import header from './Header.module.css';
 import logo from '@assets/Header/logo.webp';
-import { memo, useRef, useState, useMemo } from 'react';
+import { memo, useRef, useState, useMemo, useEffect } from 'react';
 import { PiHandbagBold } from 'react-icons/pi';
 import modalPreview from '@assets/Header/women-modal.webp';
 import { NavLink } from 'react-router-dom';
@@ -11,6 +11,7 @@ import Container from '../Container';
 import { useSelector, useDispatch } from 'react-redux';
 import { logoutUser } from '../../store/slices/loginSlice';
 import { selectLogin } from '../../store/selectors';
+import { IoMenu, IoClose, IoChevronForward } from 'react-icons/io5';
 
 const NAV_LINKS = [
   { to: '/', label: 'home' },
@@ -43,6 +44,7 @@ const ModalCategory = memo(function ModalCategory({ title, links, onLinkClick })
 export default function Header() {
   const [isLiked, setIsLiked] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isBurgerOpen, setIsBurgerOpen] = useState(false);
   const closeTimerRef = useRef(null);
 
   const { login, user } = useSelector(selectLogin);
@@ -56,7 +58,6 @@ export default function Header() {
           : [
               { to: '/register', label: 'Register' },
               { to: '/login', label: 'Login' },
-              { to: '/dashboard', label: 'Dashboard' },
             ],
       },
       {
@@ -97,12 +98,30 @@ export default function Header() {
     dispatch(logoutUser());
   };
 
+  const closeBurger = () => setIsBurgerOpen(false);
+
+  useEffect(() => {
+    if (isBurgerOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isBurgerOpen]);
+
   return (
     <header className={clsx(header.header)}>
       <Container className={clsx(header.headerContainer)}>
-        <NavLink to="/dashboard">
-          <img src={logo} alt="Logo" className={clsx(header.logo)} fetchPriority="high" />
-        </NavLink>
+        <button
+          type="button"
+          className={clsx(header.burgerBtn)}
+          onClick={() => setIsBurgerOpen(true)}
+        >
+          <IoMenu size={26} />
+        </button>
+        <img src={logo} alt="Logo" className={clsx(header.logo)} fetchPriority="high" />
 
         <nav className={clsx(header.headerNav)} onMouseLeave={scheduleClose}>
           {NAV_LINKS.map(({ to, label }) => {
@@ -197,6 +216,107 @@ export default function Header() {
             />
           </svg>
         </div>
+        <AnimatePresence>
+          {isBurgerOpen && (
+            <motion.div
+              className={clsx(header.burgerOverlay)}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              onClick={closeBurger}
+            >
+              <motion.div
+                className={clsx(header.burgerPanel)}
+                initial={{ y: -20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: -20, opacity: 0 }}
+                transition={{ duration: 0.2, ease: 'easeOut' }}
+                onClick={(e) => e.stopPropagation()}
+              >
+                <button type="button" className={clsx(header.burgerClose)} onClick={closeBurger}>
+                  <IoClose size={26} />
+                </button>
+
+                <nav className={clsx(header.burgerNavList)}>
+                  {NAV_LINKS.map(({ to, label }) => {
+                    if (to === '#footer') {
+                      return (
+                        <a
+                          key={label}
+                          href="#footer"
+                          className={clsx(header.burgerNavItem)}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            closeBurger();
+                            document
+                              .querySelector('#footer')
+                              .scrollIntoView({ behavior: 'smooth' });
+                          }}
+                        >
+                          {label}
+                          <IoChevronForward size={18} />
+                        </a>
+                      );
+                    }
+                    return (
+                      <NavLink
+                        key={to}
+                        to={to}
+                        onClick={closeBurger}
+                        className={clsx(header.burgerNavItem)}
+                      >
+                        {label}
+                        <IoChevronForward size={18} />
+                      </NavLink>
+                    );
+                  })}
+                </nav>
+
+                <div className={clsx(header.burgerAccountBox)}>
+                  {login ? (
+                    <>
+                      <button
+                        onClick={() => {
+                          handleLogout();
+                          closeBurger();
+                        }}
+                        className={clsx(header.burgerAccountLink)}
+                        style={{ background: 'none', border: 'none', cursor: 'pointer' }}
+                      >
+                        LOG OUT ({user[0]?.firstName || user[0]?.name || ''})
+                      </button>
+                      <NavLink
+                        to="/dashboard"
+                        onClick={closeBurger}
+                        className={clsx(header.burgerAccountLink)}
+                      >
+                        DashBoard
+                      </NavLink>
+                    </>
+                  ) : (
+                    <>
+                      <NavLink
+                        to="/login"
+                        onClick={closeBurger}
+                        className={clsx(header.burgerAccountLink)}
+                      >
+                        SIGN IN
+                      </NavLink>
+                      <NavLink
+                        to="/register"
+                        onClick={closeBurger}
+                        className={clsx(header.burgerAccountLink)}
+                      >
+                        CREATE AN ACCOUNT
+                      </NavLink>
+                    </>
+                  )}
+                </div>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </Container>
     </header>
   );

@@ -42,7 +42,7 @@
   font-weight: 400;
   line-height: 37px;
   letter-spacing: 1%;
-  width: 640px;
+  max-width: 640px;
 }
 
 .shoppingContentBtn {
@@ -74,7 +74,7 @@
   margin-right: 20px;
   padding-top: 80px;
   padding-bottom: 80px;
-  background: url('@assets/HomePage/traveling.webp') no-repeat left center / auto;
+  background: url('@assets/HomePage/traveling.webp') no-repeat left center / cover;
 }
 
 .travelingContent {
@@ -137,4 +137,106 @@
 .travelingContentBtn:hover {
   color: rgb(63, 58, 58);
   border-color: rgb(63, 58, 58);
+}
+
+@media (max-width: 768px) {
+  .shopping {
+    background: url('@assets/HomePage/shopping-mobile.webp') no-repeat center center / cover;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .shoppingContentTitle {
+    color: rgba(0, 0, 0, 1);
+    font-family: 'Oswald';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+  }
+
+  .shoppingContentTitle::before {
+    position: static;
+    border: none;
+  }
+
+  .shoppingContentDescription {
+    color: rgba(0, 0, 0, 1);
+    font-family: 'Roboto Light';
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 13px;
+    letter-spacing: 1%;
+    width: 180px;
+    height: 25px;
+    overflow: hidden;
+  }
+
+  .shoppingContentBtn {
+    color: rgba(0, 0, 0, 1);
+    font-family: 'Oswald';
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 15px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+  }
+
+  .traveling {
+    padding-bottom: 20px;
+    padding-top: 20px;
+    min-height: auto;
+    background: url('@assets/HomePage/traveling-mobile.webp') no-repeat center center / 290px 250px;
+  }
+
+  .travelingContent {
+    align-items: center;
+    background-color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 260px;
+    gap: 10px;
+    margin-top: 80px;
+  }
+
+  .travelingContentTitle {
+    color: rgba(0, 0, 0, 1);
+    font-family: 'Oswald';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+  }
+
+  .travelingContent::before {
+    position: static;
+    border: none;
+    height: 0px;
+  }
+
+  .travelingContentDescription {
+    color: rgba(0, 0, 0, 1);
+    font-family: 'Roboto Light';
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 13px;
+    letter-spacing: 1%;
+    width: 180px;
+    height: 25px;
+    overflow: hidden;
+  }
+
+  .travelingContentBtn {
+    color: rgba(0, 0, 0, 1);
+    font-family: 'Oswald';
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 15px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+  }
 }

@@ -62,3 +62,49 @@
   color: rgb(63, 58, 58);
   border-color: rgb(63, 58, 58);
 }
+
+@media (max-width: 1280px) {
+  .electronics {
+    background: url('@assets/ShopPage/electronics-mobile.webp') no-repeat right / cover;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .electronicsContentTitle {
+    color: rgba(0, 0, 0, 1);
+    font-family: 'Oswald';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+  }
+
+  .electronicsContentTitle::before {
+    position: static;
+    border: none;
+  }
+
+  .electronicsContentDescription {
+    color: rgba(0, 0, 0, 1);
+    font-family: 'Roboto Light';
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 13px;
+    letter-spacing: 1%;
+    width: 180px;
+    height: 25px;
+    overflow: hidden;
+  }
+
+  .electronicsContentBtn {
+    color: rgba(0, 0, 0, 1);
+    font-family: 'Oswald';
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 15px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+  }
+}

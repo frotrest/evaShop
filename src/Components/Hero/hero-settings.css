@@ -40,7 +40,7 @@
   justify-content: center;
   align-items: center;
   background-color: black;
-  padding: 15px 20px;
+  padding: 18px 20px;
 }
 
 .custom-prev:hover {
@@ -52,9 +52,32 @@
   justify-content: center;
   align-items: center;
   background-color: black;
-  padding: 17px 20px;
+  padding: 18px 20px;
 }
 
 .custom-next:hover {
   cursor: pointer;
+}
+
+@media (max-width: 1280px) {
+  .swiper-buttons {
+    justify-content: space-between;
+    padding: 0px 15px;
+  }
+
+  .swipers {
+    display: contents;
+  }
+
+  .custom-prev {
+    order: 1;
+  }
+
+  .custom-paginate {
+    order: 2;
+  }
+
+  .custom-next {
+    order: 3;
+  }
 }

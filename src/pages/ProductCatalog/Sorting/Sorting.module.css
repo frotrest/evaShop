@@ -37,3 +37,44 @@
 .sorting__field:hover {
   border: 1px solid black;
 }
+
+@media (max-width: 1280px) {
+  .sorting__form {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .sorting__field {
+    padding: 10px 60px 10px 10px;
+    font-size: 13px;
+    flex: 1 1 auto;
+    min-width: 160px;
+    background-position: right 12px center;
+    background-size: 9px;
+  }
+
+  .sorting__field2 {
+    padding-right: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sorting {
+    width: 100%;
+  }
+
+  .sorting__form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .sorting__field {
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+    font-size: 12px;
+  }
+
+  .sorting__field2 {
+    padding-right: 36px;
+  }
+}

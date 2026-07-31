@@ -125,7 +125,6 @@
   width: 14px;
   background-color: transparent;
   border: 2px solid #828282;
-  box-sizing: border-box;
   position: relative;
   flex-shrink: 0;
   transition: all 150ms ease-in-out;
@@ -208,4 +207,82 @@
   font-weight: 400;
   letter-spacing: 0%;
   text-transform: uppercase;
+}
+
+@media (max-width: 1280px) {
+  .catalogSidebar {
+    gap: 40px;
+    padding-right: 20px;
+  }
+
+  .categoryType {
+    width: 100%;
+  }
+
+  .categoryTitle {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .catalogSidebar {
+    gap: 25px;
+    padding-right: 0px;
+    border-right: none;
+    border-bottom: 1px solid #c4c4c4;
+    padding-bottom: 20px;
+    width: 100%;
+  }
+
+  .categoryTitle {
+    font-size: 18px;
+  }
+
+  .categoryType,
+  .categoryBrand {
+    gap: 15px;
+  }
+
+  .categorySize {
+    gap: 10px;
+  }
+
+  .sizesSizeWrapper {
+    width: 40px;
+    height: 40px;
+  }
+
+  .sizesSizeLabel,
+  .brandsBrandLabel,
+  .typesTypeLabel,
+  .priceValue {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .catalogSidebar {
+    gap: 20px;
+  }
+
+  .categoryTitle {
+    font-size: 16px;
+  }
+
+  .categorySize {
+    gap: 5px;
+  }
+
+  .sizesSizeWrapper {
+    width: 36px;
+    height: 36px;
+  }
+
+  .sizesSizeLabel {
+    font-size: 12px;
+  }
+
+  .priceLabels {
+    font-size: 12px !important;
+  }
 }
