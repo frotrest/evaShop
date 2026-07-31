@@ -147,7 +147,6 @@
 :global(.swiper-slide) {
   height: auto;
   flex-shrink: 0;
-  width: 348px;
 }
 
 :global(.swiper-button-disabled) {

@@ -55,7 +55,7 @@ const ProductCardSwiper = ({ swiperId = 'default' }) => {
       <Swiper
         spaceBetween={31}
         slidesPerView={4}
-        slidesPerGroup={4}
+        centeredSlides={true}
         loop={products.length >= 5}
         watchOverflow={true}
         autoplay={{
@@ -83,7 +83,6 @@ const ProductCardSwiper = ({ swiperId = 'default' }) => {
           1280: {
             slidesPerView: 6,
             spaceBetween: 40,
-            speed: 1000,
           },
         }}
         navigation={{
