@@ -28,6 +28,8 @@
 
 * You can check it out by yourself (`https://crisp-project-server.onrender.com/`).
 
+## There's no wishlist or cart because my mate's API is broken (it works throughout the entire application except these ones), and he didn’t manage to implement further wishlist and cart interactions.
+
 ### Style Encapsulation
 * **CSS Modules & clsx:** Strict layout modularity with scoped component styles, preventing global scope pollution and achieving predictable component rendering.
 
