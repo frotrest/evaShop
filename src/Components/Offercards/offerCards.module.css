@@ -3,6 +3,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 30px;
   padding-top: 30px;
+  padding-bottom: 30px;
   margin-left: 20px;
   margin-right: 20px;
 }
@@ -117,4 +118,108 @@
 .offerCardButton:hover {
   color: rgb(63, 58, 58);
   border-color: rgb(63, 58, 58);
+}
+
+@media (max-width: 1100px) {
+  .offerSection {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .offerCardFirstSecond {
+    display: contents;
+  }
+
+  .offerCardFirst {
+    order: 1;
+  }
+
+  .offerCardThird {
+    order: 2;
+  }
+
+  .offerCardSecond {
+    order: 3;
+  }
+
+  .offerCardFirst,
+  .offerCardSecond {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    min-height: 150px;
+  }
+
+  .offerCardFirst > .offerCardContent,
+  .offerCardSecond > .offerCardContent {
+    padding: 25px 15px;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .offerCardFirst > .offerCardContent > .offerCardTitle,
+  .offerCardSecond > .offerCardContent > .offerCardTitle {
+    width: auto;
+    color: rgba(0, 0, 0, 1);
+    font-family: 'Oswald';
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+  }
+
+  .offerCardFirst > .offerCardContent > .offerCardText,
+  .offerCardSecond > .offerCardContent > .offerCardText {
+    color: rgba(0, 0, 0, 1);
+    font-family: 'Roboto Light';
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 37px;
+    letter-spacing: 1%;
+  }
+
+  .offerCardFirst > .offerCardContent > .offerCardButton,
+  .offerCardSecond > .offerCardContent > .offerCardButton {
+    margin-top: 16px;
+    padding: 8px 20px;
+    font-size: 13px;
+  }
+
+  .offerCardThird {
+    min-height: 280px;
+  }
+
+  .offerCardThird > .offerCardContent {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 40px;
+    justify-content: flex-start;
+  }
+
+  .offerCardThird > .offerCardContent > .offerCardTitle {
+    width: auto;
+    max-width: 220px;
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  .offerCardThird > .offerCardContent > .offerCardText {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .offerCardButton {
+    color: rgba(0, 0, 0, 1);
+    font-family: 'Oswald';
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 15px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 20px;
+  }
 }

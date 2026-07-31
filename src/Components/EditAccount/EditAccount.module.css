@@ -26,7 +26,6 @@
   font-weight: 400;
   line-height: 20px;
   letter-spacing: 0%;
-  width: 520px;
 }
 
 .label > span {
@@ -35,13 +34,13 @@
 
 .input {
   outline: none;
-  box-sizing: border-box;
   border: 1px solid rgba(196, 196, 196, 1);
   background: none;
   padding: 10px 15px;
   font-weight: 400;
   color: rgb(83, 78, 78);
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   color: rgba(63, 63, 63, 1);
   font-family: 'Roboto';
   font-size: 16px;
@@ -138,4 +137,59 @@
 
 .saveBtn:hover {
   background: #ff4d4f;
+}
+
+@media (max-width: 1280px) {
+  .accountForm {
+    gap: 25px;
+  }
+
+  .title {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  .label {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .input {
+    max-width: 100%;
+  }
+
+  .editBtns {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .saveBtn {
+    width: 100%;
+    text-align: center;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 18px;
+  }
+
+  .label,
+  .checkboxLabel {
+    font-size: 13px;
+  }
+
+  .input {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  .saveBtn {
+    font-size: 13px;
+    padding: 10px 15px;
+  }
 }

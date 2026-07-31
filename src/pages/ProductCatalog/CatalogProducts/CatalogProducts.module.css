@@ -55,3 +55,71 @@
   letter-spacing: 0px;
   text-transform: uppercase;
 }
+
+@media (max-width: 1280px) {
+  .catalogProducts {
+    gap: 25px;
+  }
+
+  .productItem__photo {
+    width: 280px;
+    height: 355px;
+  }
+
+  .productItem__title {
+    font-size: 16px;
+  }
+
+  .productItem__price {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 768px) {
+  .catalogProducts {
+    gap: 20px;
+  }
+
+  .productItem__photo {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    aspect-ratio: 354 / 450;
+  }
+
+  .productItem__productInfo {
+    margin-top: 10px;
+  }
+
+  .productItem__type {
+    font-size: 11px;
+  }
+
+  .productItem__title {
+    font-size: 14px;
+    margin: 5px 0px 10px 0px;
+  }
+
+  .productItem__price {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .catalogProducts {
+    gap: 15px;
+  }
+
+  .productItem__photo {
+    width: 220px;
+  }
+
+  .productItem__title {
+    font-size: 12px;
+    margin: 4px 0 8px 0;
+  }
+
+  .productItem__price {
+    font-size: 14px;
+  }
+}

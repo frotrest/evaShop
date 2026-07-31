@@ -10,7 +10,7 @@ import { fetchOtherProducts } from '../../store/async/otherProductsFetch.js';
 import { toggleFilter } from '../../store/slices/filterSlice.js';
 import { selectFilters, selectOtherProductsState } from '../../store/selectors.js';
 
-const ShopFilters = () => {
+const ShopFilters = ({ shopId }) => {
   const dispatch = useDispatch();
 
   const { products, status, error } = useSelector(selectOtherProductsState);
@@ -40,7 +40,7 @@ const ShopFilters = () => {
   );
 
   return (
-    <section className={clsx(styles.ShopFilters)}>
+    <section className={clsx(styles.ShopFilters)} id={shopId ? shopId : null}>
       <div className={clsx(styles.ShopFiltersContent)}>
         <ShopBoard categories={categories} filters={filters} onChange={handleCheckBoxChange} />
         <Container className={clsx(styles.clothesItems)}>

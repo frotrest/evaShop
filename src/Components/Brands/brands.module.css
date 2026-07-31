@@ -47,3 +47,18 @@
 .brand:hover .brandImg {
   color: rgba(0, 0, 0, 1);
 }
+
+@media (max-width: 1280px) {
+  .brandsContentTitle {
+    display: none;
+  }
+
+  .brand {
+    padding: 15px 30px;
+  }
+
+  .brandImg {
+    width: 50px;
+    height: 50px;
+  }
+}

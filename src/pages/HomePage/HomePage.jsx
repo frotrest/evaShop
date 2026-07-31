@@ -15,7 +15,7 @@ const HomePage = () => {
       <Hero />
       <Brands />
       <OfferCard />
-      <ShopFilters />
+      <ShopFilters shopId="mainFilters" />
       <Shopping />
       <ProductCardList title="Featured Items">
         <ProductCardSwiper swiperId="featured" />

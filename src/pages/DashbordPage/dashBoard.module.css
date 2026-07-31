@@ -84,12 +84,13 @@
   line-height: 23px;
   letter-spacing: 0px;
   background: transparent;
-  transition: all 0.3s ease;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
   width: 200px;
 }
 
 .sidebarItem:hover {
-  font-weight: 600;
   color: #000;
   background: rgba(240, 242, 242, 1);
 }
@@ -183,7 +184,6 @@
 
 .input {
   outline: none;
-  box-sizing: border-box;
   border: 1px solid rgba(196, 196, 196, 1);
   background: none;
   padding: 10px 15px;
@@ -222,4 +222,99 @@
   line-height: 20px;
   letter-spacing: 0%;
   cursor: pointer;
+}
+
+@media (max-width: 1280px) {
+  .dashboardLayout {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 25px;
+    gap: 30px;
+  }
+
+  .sidebar {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .sidebarList {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sidebarItem {
+    width: auto;
+    padding: 10px 15px;
+    font-size: 15px;
+  }
+
+  .contentFlex {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .cardPassword {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .input {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboardWrapper {
+    padding: 25px 15px;
+  }
+
+  .pageTitle {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .dashboardLayout {
+    padding: 20px 15px;
+  }
+
+  .sidebarItem {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+
+  .contentTitle {
+    font-size: 18px;
+  }
+
+  .contentContact {
+    font-size: 15px;
+  }
+
+  .contentText {
+    font-size: 13px;
+  }
+
+  .input {
+    max-width: 100%;
+    font-size: 14px;
+  }
+
+  .formActions {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .contactBtns {
+    flex-wrap: wrap;
+  }
 }

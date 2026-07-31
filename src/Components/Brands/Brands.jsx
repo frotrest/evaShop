@@ -39,6 +39,25 @@ const Brands = () => {
         }}
         centeredSlides={true}
         className="brands-swiper"
+        breakpoints={{
+          0: {
+            slidesPerView: 2,
+            spaceBetween: 15,
+          },
+          480: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+            speed: 5500,
+          },
+          1280: {
+            slidesPerView: 6,
+            spaceBetween: 40,
+          },
+        }}
       >
         {luxuryBrandIcons.map((BrandIcon, index) => (
           <SwiperSlide key={index}>

@@ -51,7 +51,7 @@ export default function Register() {
 
   return (
     <>
-      <div className={clsx(register.registerBox)}>
+      <section className={clsx(register.registerBox)}>
         <Container className={clsx(register.registerBoxContent)}>
           <div className={clsx(register.headerForm)}>
             <div className={clsx(register.breadcrumb)}>
@@ -177,7 +177,7 @@ export default function Register() {
             </div>
           </div>
         </Container>
-      </div>
+      </section>
     </>
   );
 }

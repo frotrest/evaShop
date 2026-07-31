@@ -27,7 +27,7 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: start;
-  padding: 65px 0 116px;
+  padding: 65px 0px 115px;
 }
 
 .footer__list {
@@ -195,6 +195,7 @@ button {
 
 .items-box {
   background: #e6f1fa;
+  margin-top: 30px;
 }
 
 .items-box--content {
@@ -203,4 +204,101 @@ button {
   justify-content: space-between;
   width: 100%;
   height: 100px;
+}
+
+@media (max-width: 1280px) {
+  .footer__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding-bottom: 50px;
+  }
+
+  .footer__form,
+  .footer__list-items,
+  .footer__list-item-container {
+    align-items: center;
+  }
+
+  .items-box--content {
+    flex-direction: column;
+    gap: 20px;
+    height: auto;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+
+  .item-box {
+    width: 190px;
+  }
+
+  .footer__list {
+    width: 100%;
+    max-width: 400px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding-bottom: 20px;
+    gap: 0;
+  }
+
+  .footer__list-soc {
+    width: 120px;
+  }
+
+  .footer__list:last-child {
+    border-bottom: none;
+  }
+
+  .footer__list-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 0px;
+    cursor: pointer;
+  }
+
+  .footer__list-icon {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+  }
+
+  .footer__list-icon::before,
+  .footer__list-icon::after {
+    content: '';
+    position: absolute;
+    background: var(--White);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .footer__list-icon::before {
+    width: 15px;
+    height: 1px;
+  }
+
+  .footer__list-icon::after {
+    width: 1px;
+    height: 15px;
+    transition:
+      transform 0.25s ease,
+      opacity 0.25s ease;
+  }
+
+  .footer__list-icon--open::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+    opacity: 0;
+  }
+
+  .footer__list-content {
+    overflow: hidden;
+  }
+
+  .footer__list-items {
+    padding-top: 5px;
+    padding-bottom: 15px;
+  }
 }

@@ -27,12 +27,12 @@ const Hero = () => {
     <>
       <section className={styles.hero}>
         <Swiper
-          spaceBetween={60}
+          spaceBetween={200}
           slidesPerView={1}
           modules={[Navigation, Pagination, Autoplay]}
           centeredSlides={true}
           autoplay={{
-            delay: 5000,
+            delay: 3000,
           }}
           navigation={{
             nextEl: '.custom-next',

@@ -106,7 +106,6 @@
 .formFieldInput {
   flex: 1;
   outline: none;
-  box-sizing: border-box;
   border: 1px solid rgba(196, 196, 196, 1);
   background: none;
   padding: 10px 15px;
@@ -248,4 +247,95 @@
 
 .formBtnLink:hover {
   background-color: rgba(235, 87, 87, 1);
+}
+
+@media (max-width: 1280px) {
+  .loginTitle {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .formCheckboxInput {
+    width: 22px;
+  }
+
+  .loginPage {
+    padding-top: 0px;
+  }
+
+  .loginPageContent {
+    padding-bottom: 40px;
+    padding-top: 40px;
+  }
+
+  .loginTitle {
+    font-size: 28px;
+  }
+
+  .formContent {
+    padding: 40px 25px;
+    width: 100%;
+  }
+
+  .formField {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .formFieldLabel {
+    flex: 0 0 auto;
+  }
+
+  .formCheckbox {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .formCheckboxLabel {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .formBtns {
+    flex-direction: column;
+    gap: 15px;
+    padding-top: 30px;
+    width: 100%;
+  }
+
+  .formBtnSubmit,
+  .formBtnLink {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .formContent {
+    padding: 30px 15px;
+  }
+
+  .loginTitle {
+    font-size: 22px;
+  }
+
+  .navBarItemLink {
+    font-size: 12px;
+  }
+
+  .formFieldLabel {
+    font-size: 14px;
+  }
+
+  .formFieldInput {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .formCheckboxLabel {
+    font-size: 12px;
+  }
 }

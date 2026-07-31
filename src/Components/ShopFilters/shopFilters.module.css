@@ -229,3 +229,139 @@
   letter-spacing: 0%;
   text-align: center;
 }
+
+@media (max-width: 1280px) {
+  .shopItemImgContent {
+    height: 380px;
+  }
+
+  .shopItemImg {
+    width: 290px;
+    height: 380px;
+  }
+
+  .clothesItems {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .ShopFiltersContent {
+    flex-direction: column;
+  }
+
+  .sideBarClothes {
+    padding-left: 0px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 50px;
+  }
+
+  .clothesTypes {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    width: 320px;
+  }
+
+  .clothesItems {
+    padding-left: 0px;
+    border-left: none;
+    border-top: 2px solid gray;
+    padding-top: 30px;
+    width: 100%;
+  }
+
+  .shopItems {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .ShopFilters {
+    padding-top: 20px;
+    padding-bottom: 15px;
+  }
+
+  .shopItems {
+    gap: 15px;
+  }
+
+  .shopItemImgContent {
+    height: 320px;
+  }
+
+  .shopItemImg {
+    width: 280px;
+    max-width: 320px;
+    height: 320px;
+  }
+
+  .sideBarClothesTitle {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  .clothType {
+    font-size: 12px;
+  }
+
+  .shopItemButton {
+    font-size: 11px;
+    padding: 10px 15px;
+  }
+
+  .shopItemTitle {
+    font-size: 15px;
+    line-height: 1.4px;
+  }
+
+  .shopItemPrice,
+  .shopItemDiscount {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .errorTitle {
+    font-size: 18px;
+    line-height: 1.4px;
+  }
+
+  .shopItemsBtn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .shopItem {
+    width: 100%;
+  }
+
+  .shopItemImgContent {
+    height: 280px;
+  }
+
+  .shopItemImg {
+    width: 280px;
+    height: 280px;
+  }
+
+  .shopItemsBtn {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .sideBarClothes {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .clothesTypes {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

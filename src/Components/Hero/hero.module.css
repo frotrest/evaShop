@@ -86,3 +86,68 @@
   width: 416px;
   height: 623px;
 }
+
+@media (max-width: 1280px) {
+  .hero {
+    margin: 0px;
+  }
+
+  .swiperBlock {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .swiperCardContent {
+    gap: 15px;
+    align-items: center;
+  }
+
+  .swiperCardTitle {
+    font-family: 'Oswald';
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 35px;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: uppercase;
+    width: 290px;
+  }
+
+  .swiperCardTitle::before {
+    content: '';
+    position: static;
+    top: auto;
+    right: auto;
+    border: none !important;
+  }
+
+  .photos {
+    display: flex;
+    justify-content: center;
+    padding: 0px 45px 0px 0px;
+    width: 100%;
+  }
+
+  .swiperCardBottom {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 130px;
+    height: 195px;
+    object-fit: cover;
+    box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+  }
+
+  .swiperCardImg {
+    position: relative;
+    width: 165px;
+    height: 248px;
+    object-fit: cover;
+    box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.25);
+    z-index: 2;
+    margin-top: 35px;
+  }
+}

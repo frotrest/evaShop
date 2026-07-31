@@ -19,3 +19,10 @@
 .brands-swiper .swiper-wrapper {
   transition-timing-function: linear !important;
 }
+
+@media (max-width: 1280px) {
+  .brands-swiper {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}

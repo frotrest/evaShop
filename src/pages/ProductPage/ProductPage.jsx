@@ -226,7 +226,10 @@ export default function ProductPage() {
                 mainSwiperRef.current = swiper;
               }}
               onSlideChange={(swiper) => setActiveImageIndex(swiper.activeIndex)}
-              spaceBetween={10}
+              spaceBetween={5}
+              slidesPerView={1}
+              observer={true}
+              observeParents={true}
               className={clsx(styles.galleryMain)}
             >
               {images.map((img, index) => (

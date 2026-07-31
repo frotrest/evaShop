@@ -10,6 +10,7 @@
   font-size: 24px;
   font-weight: 400;
   line-height: 1.2;
+  width: 160px;
 }
 
 .swiper {
@@ -156,4 +157,10 @@
   border-color: #e0e0e0 !important;
   color: #cccccc !important;
   pointer-events: none;
+}
+
+@media (max-width: 1280px) {
+  .nav {
+    top: -40px;
+  }
 }

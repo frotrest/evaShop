@@ -22,6 +22,18 @@ body {
   margin: 0px auto;
 }
 
+@media (max-width: 1280px) {
+  .container {
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 1280px) {
+  #mainFilters {
+    display: none;
+  }
+}
+
 .pageLoader {
   color: black;
   font-family: 'Oswald';

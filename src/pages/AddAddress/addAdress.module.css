@@ -37,7 +37,6 @@
 
 .input {
   outline: none;
-  box-sizing: border-box;
   border: 1px solid rgba(196, 196, 196, 1);
   background: none;
   padding: 10px 15px;
@@ -84,4 +83,55 @@
 
 .btn:hover {
   background: #ff4d4f;
+}
+
+@media (max-width: 1280px) {
+  .form {
+    grid-template-columns: 1fr;
+  }
+
+  .formGroup {
+    grid-column: span 1;
+  }
+
+  .input {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  .formActions {
+    grid-column: span 1;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 18px;
+  }
+
+  .label {
+    font-size: 14px;
+  }
+
+  .input {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  .btn {
+    font-size: 13px;
+    padding: 10px 16px;
+  }
 }
