@@ -43,14 +43,17 @@
 
 @media (max-width: 1280px) {
   .blogSection {
-    padding: 60px 0px;
+    padding: 40px 0px;
   }
 
   .blogContent {
-    gap: 30px;
+    flex-direction: column;
+    gap: 25px;
 
     img {
       max-width: 420px;
+      width: 100%;
+      height: 280px;
     }
   }
 
@@ -59,40 +62,13 @@
       font-size: 36px;
       line-height: 1.3;
       width: 100%;
-      max-width: 320px;
+      max-width: 100%;
     }
 
     .description {
       font-size: 16px;
       line-height: 1.6;
       max-width: 320px;
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  .blogSection {
-    padding: 40px 0px;
-  }
-
-  .blogContent {
-    flex-direction: column;
-    gap: 24px;
-
-    img {
-      max-width: 100%;
-      width: 100%;
-      height: 280px;
-    }
-  }
-
-  .contentTitle {
-    .title {
-      max-width: 100%;
-    }
-
-    .description {
-      max-width: 100%;
     }
   }
 }
