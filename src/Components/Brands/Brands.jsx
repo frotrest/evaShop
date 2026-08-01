@@ -54,7 +54,7 @@ const Brands = () => {
             speed: 5500,
           },
           1280: {
-            slidesPerView: 6,
+            slidesPerView: 5,
             spaceBetween: 40,
           },
         }}
