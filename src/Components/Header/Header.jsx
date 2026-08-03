@@ -12,6 +12,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { logoutUser } from '../../store/slices/loginSlice';
 import { selectLogin } from '../../store/selectors';
 import { IoMenu, IoClose, IoChevronForward } from 'react-icons/io5';
+import { useNavigate } from "react-router-dom";
 
 const NAV_LINKS = [
   { to: '/', label: 'home' },
@@ -70,6 +71,8 @@ export default function Header() {
     ];
   }, [login]);
 
+  const navigate = useNavigate();
+
   const cancelClose = () => {
     if (closeTimerRef.current) {
       clearTimeout(closeTimerRef.current);
@@ -96,6 +99,7 @@ export default function Header() {
 
   const handleLogout = () => {
     dispatch(logoutUser());
+    navigate("/", { replace: true });
   };
 
   const closeBurger = () => setIsBurgerOpen(false);
