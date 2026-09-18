@@ -111,10 +111,7 @@ export default function Header() {
       {
         title: 'Client Services',
         links: login
-          ? [
-              { to: '/dashboard', label: 'My Account' },
-              { to: '/dashboard/orders', label: 'Order History' },
-            ]
+          ? [{ to: '/dashboard', label: 'My Account' }]
           : [
               { to: '/login', label: 'Sign In' },
               { to: '/register', label: 'Create Account' },
