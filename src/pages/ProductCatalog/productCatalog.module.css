@@ -1,0 +1,179 @@
+.productCatalogWrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 40px;
+  padding: 48px 28px 80px;
+  align-items: flex-start;
+}
+
+.sidebarColumn {
+  width: 100%;
+}
+
+.productCatalogMain {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.catalogControlsRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f0f0f2;
+  gap: 16px;
+}
+
+.catalogItemCount {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  color: #71717a;
+  font-weight: 500;
+}
+
+.sortingWrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mobileFilterToggle {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  border: 1px solid #e4e4e7;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #111111;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mobileFilterToggle:hover {
+  border-color: #111111;
+  background: #fafafa;
+}
+
+.filterBadge {
+  background: #111111;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 10px;
+}
+
+.mobileDrawerOverlay {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .productCatalogWrapper {
+    grid-template-columns: 1fr;
+    padding: 24px 16px 60px;
+    gap: 24px;
+  }
+
+  .mobileFilterToggle {
+    display: inline-flex;
+  }
+
+  .catalogItemCount {
+    display: none;
+  }
+
+  .sidebarColumn {
+    display: none;
+  }
+
+  .sidebarOpenMobile {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    overflow-y: auto;
+    padding: 20px 16px;
+  }
+
+  .sidebarMobileContent {
+    background: #ffffff;
+    max-width: 480px;
+    margin: 0 auto;
+    border-radius: 8px;
+    padding: 24px 20px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+
+  .mobileDrawerHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #f0f0f2;
+  }
+
+  .mobileDrawerTitle {
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #111111;
+    margin: 0;
+  }
+
+  .closeDrawerBtn {
+    background: none;
+    border: none;
+    padding: 6px;
+    color: #18181b;
+    cursor: pointer;
+    display: flex;
+  }
+
+  .mobileApplyBar {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid #f0f0f2;
+  }
+
+  .applyBtn {
+    flex: 1;
+    background: #111111;
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  .resetBtn {
+    background: #f4f4f5;
+    color: #18181b;
+    border: 1px solid #e4e4e7;
+    padding: 12px 18px;
+    border-radius: 4px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+}

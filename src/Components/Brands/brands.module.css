@@ -1,0 +1,125 @@
+.brandsSection {
+  padding: 48px 0 52px;
+  background: #ffffff;
+  border-bottom: 1px solid #f0f0f2;
+  overflow: hidden;
+}
+
+.headerBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 32px;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.eyebrow {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #71717a;
+  margin-bottom: 6px;
+}
+
+.title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #111111;
+  margin: 0;
+}
+
+.brandCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
+  background: #fafafa;
+  border: 1px solid #f0f0f2;
+  border-radius: 6px;
+  min-width: 170px;
+  height: 74px;
+  transition: all 0.25s ease;
+  user-select: none;
+  cursor: pointer;
+}
+
+.brandCard:hover {
+  background: #111111;
+  border-color: #111111;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.brandIconWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  color: #27272a;
+  transition: color 0.2s ease;
+}
+
+.brandCard:hover .brandIconWrap {
+  color: #ffffff;
+}
+
+.brandIcon {
+  color: inherit;
+}
+
+.brandLabel {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.brandTextWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #27272a;
+  transition: color 0.2s ease;
+}
+
+.brandCard:hover .brandTextWrap {
+  color: #ffffff;
+}
+
+.brandName {
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.serifFont .brandName {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 17px;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.brandSub {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #a1a1aa;
+  margin-top: 2px;
+  text-transform: uppercase;
+}
+
+.brandCard:hover .brandSub {
+  color: #e4e4e7;
+}

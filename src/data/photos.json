@@ -1,0 +1,40 @@
+{
+  "data": [
+    {
+      "_id": 1,
+      "title": "summer fashion set",
+      "urls": [
+        "https://images.pexels.com/photos/1485031/pexels-photo-1485031.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "https://images.pexels.com/photos/38289/portrait-photography-profile-face-one-38289.jpeg?auto=compress&cs=tinysrgb&w=600"
+      ]
+    },
+    {
+      "_id": 2,
+      "title": "casual street style",
+      "urls": [
+        "https://images.pexels.com/photos/1631181/pexels-photo-1631181.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "https://images.pexels.com/photos/2747600/pexels-photo-2747600.jpeg?auto=compress&cs=tinysrgb&w=600"
+      ]
+    },
+    {
+      "_id": 3,
+      "title": "winter collection",
+      "urls": [
+        "https://images.pexels.com/photos/2010812/pexels-photo-2010812.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg?auto=compress&cs=tinysrgb&w=600"
+      ]
+    },
+    {
+      "_id": 4,
+      "title": "holiday party look",
+      "urls": [
+        "https://images.pexels.com/photos/2065195/pexels-photo-2065195.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "https://images.pexels.com/photos/2065200/pexels-photo-2065200.jpeg?auto=compress&cs=tinysrgb&w=600"
+      ]
+    }
+  ],
+  "totalPhotos": 8,
+  "totalPages": 2,
+  "currentPage": 1,
+  "perPage": 2
+}

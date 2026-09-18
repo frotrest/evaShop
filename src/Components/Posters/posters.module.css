@@ -1,0 +1,213 @@
+.shoppingBanner {
+  position: relative;
+  background: url('@assets/HomePage/shopping.webp') no-repeat center / cover;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  margin: 60px 0;
+}
+
+.travelingBanner {
+  position: relative;
+  background: url('@assets/HomePage/traveling.webp') no-repeat center / cover;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  margin: 60px 0;
+}
+
+.bannerBackdrop {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.92) 0%,
+    rgba(255, 255, 255, 0.75) 50%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  z-index: 1;
+}
+
+.bannerBackdropDark {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to left,
+    rgba(14, 15, 18, 0.95) 0%,
+    rgba(14, 15, 18, 0.75) 55%,
+    rgba(14, 15, 18, 0.2) 100%
+  );
+  z-index: 1;
+}
+
+.bannerContainer {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+}
+
+.alignRight {
+  justify-content: flex-end;
+}
+
+.bannerCard {
+  max-width: 540px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 44px 48px;
+  border-radius: 8px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.darkCard {
+  background: rgba(18, 20, 24, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.bannerEyebrow {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #71717a;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.bannerTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #e4e4e7;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+
+.bannerTitle {
+  font-family: 'Oswald', sans-serif;
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: #111111;
+  letter-spacing: 0.5px;
+  margin: 0 0 16px 0;
+}
+
+.bannerTitle em {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  text-transform: none;
+  color: #b91c1c;
+}
+
+.whiteTitle {
+  color: #ffffff;
+}
+
+.whiteTitle em {
+  color: #fca5a5;
+}
+
+.bannerDescription {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #52525b;
+  margin: 0 0 24px 0;
+}
+
+.lightDescription {
+  color: #a1a1aa;
+}
+
+.bannerFeatures {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.featureBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #27272a;
+}
+
+.bannerButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #111111;
+  color: #ffffff;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 14px 32px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.bannerButton:hover {
+  background: #27272a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
+}
+
+.bannerButtonLight {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #ffffff;
+  color: #111111;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 14px 32px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+.bannerButtonLight:hover {
+  background: #f4f4f5;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .bannerCard {
+    padding: 30px 20px;
+    margin: 20px 0;
+  }
+  .bannerTitle {
+    font-size: 32px;
+  }
+  .shoppingBanner,
+  .travelingBanner {
+    min-height: 440px;
+    margin: 40px 0;
+  }
+}

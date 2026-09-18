@@ -1,0 +1,229 @@
+.container {
+  background: #ffffff;
+  border: 1px solid #f0f0f2;
+  border-radius: 8px;
+  padding: 28px 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #f0f0f2;
+  padding-bottom: 14px;
+  margin-bottom: 12px;
+}
+
+.cardTitleBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.headerIcon {
+  color: #111111;
+}
+
+.title {
+  color: #111111;
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.subtitle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13.5px;
+  color: #71717a;
+  margin: 0 0 24px 0;
+}
+
+.accountForm {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.gridTwoCols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.label {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #27272a;
+}
+
+.required {
+  color: #dc2626;
+  font-weight: 700;
+}
+
+.input {
+  outline: none;
+  border: 1px solid #d4d4d8;
+  background: #ffffff;
+  border-radius: 4px;
+  padding: 10px 14px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13.5px;
+  color: #111111;
+  width: 100%;
+  box-sizing: border-box;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.input:focus {
+  border-color: #111111;
+  box-shadow: 0 0 0 2px rgba(17, 17, 17, 0.08);
+}
+
+.input::placeholder {
+  color: #a1a1aa;
+}
+
+.optionsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px 0;
+  border-top: 1px solid #f0f0f2;
+  border-bottom: 1px solid #f0f0f2;
+}
+
+.customCheckboxRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.nativeCheckbox {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+}
+
+.customBox {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  border: 1.5px solid #d4d4d8;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.customCheckboxRow:hover .customBox {
+  border-color: #71717a;
+}
+
+.nativeCheckbox:checked ~ .customBox {
+  background: #111111;
+  border-color: #111111;
+}
+
+.checkboxText {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #3f3f46;
+}
+
+.nativeCheckbox:checked ~ .checkboxText {
+  color: #111111;
+  font-weight: 600;
+}
+
+.nestedField {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 440px;
+  padding-left: 28px;
+  margin-top: -6px;
+  margin-bottom: 8px;
+}
+
+.editBtns {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 22px;
+  border-radius: 4px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.saveBtn {
+  background: #111111;
+  color: #ffffff;
+}
+
+.saveBtn:hover {
+  background: #27272a;
+}
+
+.cancelBtn {
+  background: #ffffff;
+  color: #18181b;
+  border: 1px solid #d4d4d8;
+}
+
+.cancelBtn:hover {
+  background: #f4f4f5;
+  border-color: #111111;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+  .gridTwoCols {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .nestedField {
+    padding-left: 0;
+    max-width: 100%;
+  }
+}

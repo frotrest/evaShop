@@ -1,0 +1,365 @@
+.registerBox {
+  padding: 40px 0 80px;
+  background-color: #fafafa;
+  min-height: calc(100vh - 120px);
+  display: flex;
+  align-items: center;
+}
+
+.registerBoxContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  width: 100%;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  color: #71717a;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.breadcrumbItem {
+  color: #71717a;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumbItem:hover {
+  color: #111111;
+}
+
+.separator {
+  color: #d4d4d8;
+}
+
+.breadcrumbActive {
+  color: #111111;
+  font-weight: 600;
+}
+
+.cardWrapper {
+  width: 100%;
+  max-width: 600px;
+  background: #ffffff;
+  border: 1px solid #e4e4e7;
+  border-radius: 8px;
+  padding: 48px 44px;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.cardHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+}
+
+.cardSubhead {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #71717a;
+}
+
+.title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #111111;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: #52525b;
+  margin: 0;
+  max-width: 440px;
+}
+
+.formContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  width: 100%;
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.formFieldLabel {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #18181b;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.requiredStar {
+  color: #ef4444;
+}
+
+.formFieldInput {
+  width: 100%;
+  padding: 13px 16px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  color: #111111;
+  background: #ffffff;
+  border: 1px solid #e4e4e7;
+  border-radius: 4px;
+  outline: none;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.formFieldInput:focus {
+  border-color: #111111;
+  box-shadow: 0 0 0 1px #111111;
+}
+
+.formFieldInputError {
+  border-color: #ef4444 !important;
+  background: #fffafa;
+}
+
+.formFieldInputError:focus {
+  box-shadow: 0 0 0 1px #ef4444 !important;
+}
+
+.passwordWrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.passwordFieldInput {
+  padding-right: 48px;
+}
+
+.passwordToggleBtn {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  color: #71717a;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border-radius: 4px;
+  transition: color 0.2s ease;
+}
+
+.passwordToggleBtn:hover {
+  color: #111111;
+}
+
+.errorText {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  color: #ef4444;
+  margin: 0;
+}
+
+.checkboxGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-top: 6px;
+}
+
+.formCheckbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.formCheckboxInput {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #d4d4d8;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+  margin-top: 2px;
+  transition: all 0.15s ease;
+}
+
+.formCheckboxInput:hover {
+  border-color: #111111;
+}
+
+.formCheckboxInput:checked {
+  background: #111111;
+  border-color: #111111;
+}
+
+.formCheckboxInput:checked::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 1.5px;
+  width: 5px;
+  height: 9px;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.formCheckboxInputError {
+  border-color: #ef4444;
+}
+
+.formCheckboxLabel {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: #52525b;
+  cursor: pointer;
+  user-select: none;
+}
+
+.formActions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 15px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #111111;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.submitBtn:hover:not(:disabled) {
+  background: #27272a;
+  transform: translateY(-1px);
+}
+
+.submitBtn:disabled {
+  background: #a1a1aa;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 4px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #e4e4e7;
+}
+
+.dividerText {
+  padding: 0 14px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #a1a1aa;
+}
+
+.signInLink {
+  width: 100%;
+  padding: 14px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #111111;
+  background: #ffffff;
+  border: 1px solid #e4e4e7;
+  border-radius: 4px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+.signInLink:hover {
+  border-color: #111111;
+  background: #fafafa;
+}
+
+@media (max-width: 640px) {
+  .registerBox {
+    padding: 24px 16px 60px;
+  }
+
+  .cardWrapper {
+    padding: 32px 20px;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Women",
+    "slug": "women",
+    "categories": ["Outerwear", "Dresses", "Jeans", "Sweaters and Hoodies"]
+  },
+  {
+    "name": "Men",
+    "slug": "men",
+    "categories": ["Suits and Blazers", "Shirts", "Jeans and Trousers", "Outerwear"]
+  },
+  {
+    "name": "Kids",
+    "slug": "kids",
+    "categories": ["For Girls (2-14)", "For Boys (2-14)", "Babywear"]
+  },
+  {
+    "name": "Accessories",
+    "slug": "accessories",
+    "categories": ["Bags and Wallets", "Headwear", "Belts", "Jewelry"]
+  },
+  {
+    "name": "Footwear",
+    "slug": "footwear",
+    "categories": ["Sneakers", "Boots", "Sandals", "Dress Shoes"]
+  },
+  {
+    "name": "Sale",
+    "slug": "sale",
+    "categories": ["Discounts up to -70%", "Last Size Clearance", "Seasonal Sale"]
+  },
+  {
+    "name": "New Arrivals",
+    "slug": "new-arrivals",
+    "categories": ["New for Women", "New for Men", "Autumn/Winter Collection"]
+  },
+  {
+    "name": "Sportswear",
+    "slug": "sportswear",
+    "categories": ["Running Gear", "Fitness Wear", "Thermal Underwear", "Sports Footwear"]
+  },
+  {
+    "name": "Lingerie",
+    "slug": "lingerie",
+    "categories": ["Bras", "Underwear", "Pajamas and Robes", "Thermal Underwear"]
+  },
+  {
+    "name": "Brands",
+    "slug": "brands",
+    "categories": ["Premium Brands", "Local Designers", "Sustainable Fashion"]
+  }
+]

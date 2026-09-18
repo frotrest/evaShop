@@ -1,0 +1,374 @@
+.heroSection {
+  position: relative;
+  background: linear-gradient(180deg, #fbfbfa 0%, #f4f3f0 100%);
+  overflow: hidden;
+  border-bottom: 1px solid #e7e6e2;
+}
+
+.heroSwiper {
+  width: 100%;
+}
+
+.slideContainer {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 50px 32px 70px;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 50px;
+  min-height: 640px;
+}
+
+.contentCol {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 2;
+}
+
+.tagBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  border: 1px solid #e4e4e7;
+  color: #18181b;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.headline {
+  font-family: 'Oswald', sans-serif;
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 1.06;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+  color: #111111;
+  margin-bottom: 20px;
+  max-width: 680px;
+}
+
+.ampersand {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  color: #b91c1c;
+  margin: 0 8px;
+  text-transform: lowercase;
+}
+
+.subtext {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #52525b;
+  max-width: 520px;
+  margin-bottom: 36px;
+}
+
+.buttonGroup {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+
+.primaryBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #111111;
+  color: #ffffff;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  padding: 15px 32px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+.primaryBtn:hover {
+  background: #27272a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.secondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+  color: #18181b;
+  border: 1px solid #d4d4d8;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.secondaryBtn:hover {
+  background: #ffffff;
+  border-color: #18181b;
+}
+
+.trustBadges {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-top: 24px;
+  border-top: 1px solid #e4e4e7;
+  width: 100%;
+  max-width: 520px;
+}
+
+.trustItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.trustNumber {
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #18181b;
+  letter-spacing: 0.5px;
+}
+
+.trustLabel {
+  font-size: 11px;
+  color: #71717a;
+}
+
+.trustDivider {
+  width: 1px;
+  height: 28px;
+  background: #e4e4e7;
+}
+
+.visualCol {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.imageStage {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+}
+
+.primaryImgWrap {
+  position: relative;
+  width: 380px;
+  height: 520px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.18);
+  background: #e4e4e7;
+}
+
+.mainImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.floatingProductCard {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 14px 18px;
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.floatingTag {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #71717a;
+  text-transform: uppercase;
+}
+
+.floatingTitle {
+  font-family: 'Oswald', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #111111;
+  margin: 2px 0;
+  text-transform: uppercase;
+}
+
+.floatingPrice {
+  font-size: 13px;
+  font-weight: 700;
+  color: #b91c1c;
+}
+
+.secondaryImgWrap {
+  position: absolute;
+  top: 50px;
+  right: -20px;
+  width: 200px;
+  height: 280px;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 6px solid #ffffff;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.14);
+  background: #f4f4f5;
+  z-index: 3;
+}
+
+.secImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.stampBadge {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: #111111;
+  color: #ffffff;
+  padding: 6px 10px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Oswald', sans-serif;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.stampBadge strong {
+  font-size: 12px;
+}
+
+.controlsBar {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 32px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 5;
+  position: relative;
+}
+
+.arrowControls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.counterDisplay {
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #52525b;
+}
+
+.counterDisplay em {
+  font-style: normal;
+  margin: 0 4px;
+  opacity: 0.4;
+}
+
+@media (max-width: 1120px) {
+  .headline {
+    font-size: 48px;
+  }
+  .slideContainer {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 40px 24px;
+  }
+  .visualCol {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .headline {
+    font-size: 34px;
+    line-height: 1.15;
+  }
+  .primaryImgWrap {
+    width: 100%;
+    max-width: 320px;
+    height: 420px;
+  }
+  .secondaryImgWrap {
+    width: 140px;
+    height: 190px;
+    right: 0;
+  }
+  .trustBadges {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .headline {
+    font-size: 28px;
+    line-height: 1.12;
+  }
+  .subtext {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+  .buttonGroup {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 32px;
+  }
+  .primaryBtn,
+  .secondaryBtn {
+    width: 100%;
+    justify-content: center;
+  }
+  .primaryImgWrap {
+    width: 100%;
+    max-width: 100%;
+    height: 360px;
+  }
+  .secondaryImgWrap {
+    display: none;
+  }
+  .floatingProductCard {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    padding: 10px 14px;
+  }
+  .controlsBar {
+    padding: 0 20px 20px;
+  }
+}

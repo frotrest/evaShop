@@ -1,0 +1,46 @@
+{
+  "name": "evaShop",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/material": "^5.16.14",
+    "@reduxjs/toolkit": "^2.5.0",
+    "axios": "^1.7.9",
+    "canvas-confetti": "^1.9.4",
+    "clsx": "^2.1.1",
+    "formik": "^2.4.9",
+    "json-server": "^1.0.0-beta.3",
+    "motion": "^12.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-icons": "^5.4.0",
+    "react-redux": "^9.2.0",
+    "react-router-dom": "^7.1.1",
+    "redux-persist": "^6.0.0",
+    "swiper": "^11.1.15"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.18.0",
+    "@types/node": "^22.10.7",
+    "@types/react": "^19.0.7",
+    "@types/react-dom": "^19.0.3",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.18.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.16",
+    "prettier": "^3.4.2",
+    "vite": "^6.0.7",
+    "vite-plugin-svgr": "^4.3.0"
+  }
+}

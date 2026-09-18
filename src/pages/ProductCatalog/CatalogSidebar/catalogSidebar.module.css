@@ -1,0 +1,173 @@
+.catalogSidebar {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid #f0f0f2;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.accordion {
+  border-bottom: 1px solid #f0f0f2 !important;
+  background: transparent !important;
+}
+
+.accordion:last-child {
+  border-bottom: none !important;
+}
+
+.accordion::before {
+  display: none !important;
+}
+
+.categoryTitle {
+  color: #111111;
+  font-family: 'Oswald', sans-serif;
+  font-size: 14.5px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.categoryIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #71717a;
+  transition: color 0.2s ease;
+}
+
+.filterList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-height: 240px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.filterList::-webkit-scrollbar {
+  width: 4px;
+}
+
+.filterList::-webkit-scrollbar-track {
+  background: #f4f4f5;
+  border-radius: 4px;
+}
+
+.filterList::-webkit-scrollbar-thumb {
+  background: #d4d4d8;
+  border-radius: 4px;
+}
+
+.filterRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  user-select: none;
+  width: 100%;
+  padding: 4px 0;
+  transition: opacity 0.15s ease;
+}
+
+.filterRow:hover {
+  opacity: 0.85;
+}
+
+.filterCheckbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-color: #ffffff;
+  border: 1.5px solid #d4d4d8;
+  border-radius: 4px;
+  flex-shrink: 0;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.filterRow:hover .checkmark {
+  border-color: #71717a;
+}
+
+.filterCheckbox:checked ~ .checkmark {
+  background-color: #111111;
+  border-color: #111111;
+}
+
+.checkmark::after {
+  content: '';
+  position: absolute;
+  display: none;
+  left: 5px;
+  top: 2px;
+  width: 5px;
+  height: 9px;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.filterCheckbox:checked ~ .checkmark::after {
+  display: block;
+}
+
+.filterLabel {
+  color: #3f3f46;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13.5px;
+  font-weight: 500;
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: color 0.15s ease;
+}
+
+.filterCheckbox:checked ~ .filterLabel {
+  color: #111111;
+  font-weight: 600;
+}
+
+.filterRow:hover .filterLabel {
+  color: #111111;
+}
+
+.priceBox {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 4px 6px 12px 6px;
+}
+
+.priceLabels {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.priceValue {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #18181b;
+  background: #f4f4f5;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.priceDivider {
+  color: #a1a1aa;
+  font-size: 12px;
+}

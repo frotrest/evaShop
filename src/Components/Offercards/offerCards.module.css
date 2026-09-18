@@ -1,0 +1,202 @@
+.offerSection {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 56px 28px;
+}
+
+.offerGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.stackCol {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.offerCard {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  min-height: 270px;
+  background-size: cover;
+  background-position: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.offerCard:hover {
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+}
+
+.cardAppearance {
+  background-image: url('@assets/HomePage/appearance.webp');
+}
+
+.cardStyle {
+  background-image: url('@assets/HomePage/style.webp');
+}
+
+.cardDiscount {
+  background-image: url('@assets/HomePage/discount.webp');
+  min-height: 568px;
+}
+
+.cardBackdrop {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.94) 0%,
+    rgba(255, 255, 255, 0.8) 55%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  z-index: 1;
+}
+
+.cardBackdropDark {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(17, 17, 17, 0.94) 0%,
+    rgba(17, 17, 17, 0.65) 50%,
+    rgba(17, 17, 17, 0.25) 100%
+  );
+  z-index: 1;
+}
+
+.offerCardContent {
+  position: relative;
+  z-index: 2;
+  padding: 36px 40px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 440px;
+}
+
+.tallCardContent {
+  justify-content: flex-end;
+  max-width: 480px;
+  color: #ffffff;
+}
+
+.cardTag {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #71717a;
+  margin-bottom: 8px;
+}
+
+.saleTag {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fca5a5;
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.offerCardTitle {
+  font-family: 'Oswald', sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.15;
+  text-transform: uppercase;
+  color: #111111;
+  margin: 0 0 10px 0;
+  letter-spacing: 0.5px;
+}
+
+.saleTitle {
+  color: #ffffff;
+  font-size: 42px;
+}
+
+.offerCardText {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #52525b;
+  margin: 0 0 24px 0;
+}
+
+.tallCardContent .offerCardText {
+  color: #d4d4d8;
+}
+
+.offerCardButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #111111;
+  color: #ffffff;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  padding: 12px 24px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.offerCardButton:hover {
+  background: #27272a;
+  transform: translateY(-2px);
+}
+
+.saleButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  color: #111111;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+.saleButton:hover {
+  background: #f4f4f5;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 960px) {
+  .offerGrid {
+    grid-template-columns: 1fr;
+  }
+  .cardDiscount {
+    min-height: 380px;
+  }
+  .offerCardContent {
+    padding: 30px 24px;
+  }
+  .offerCardTitle {
+    font-size: 26px;
+  }
+  .saleTitle {
+    font-size: 32px;
+  }
+}

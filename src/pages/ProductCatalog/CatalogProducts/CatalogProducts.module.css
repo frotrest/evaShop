@@ -1,0 +1,50 @@
+.catalogGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  width: 100%;
+}
+
+.cardWrapper {
+  width: 100%;
+}
+
+.emptyCatalog {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 80px 20px;
+  background: #fafafa;
+  border-radius: 8px;
+  border: 1px dashed #e4e4e7;
+}
+
+.emptyTitle {
+  font-family: 'Oswald', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #111111;
+  margin-bottom: 8px;
+}
+
+.emptySubtitle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  color: #71717a;
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+  .catalogGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .catalogGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

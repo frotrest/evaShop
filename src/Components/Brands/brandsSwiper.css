@@ -1,0 +1,32 @@
+.brands-swiper {
+  border-top: 1px solid #e4e4e7;
+  border-bottom: 1px solid #e4e4e7;
+  padding-top: 32px !important;
+  padding-bottom: 32px !important;
+  mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    black 80px,
+    black calc(100% - 80px),
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    black 80px,
+    black calc(100% - 80px),
+    transparent 100%
+  );
+}
+
+.brands-swiper .swiper-wrapper {
+  transition-timing-function: linear !important;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .brands-swiper {
+    padding-top: 24px !important;
+    padding-bottom: 24px !important;
+  }
+}
