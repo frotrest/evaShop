@@ -35,5 +35,5 @@ jobs:
       - name: Upload static files as artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          name: dist-files
+          name: github-pages
           path: ./dist
