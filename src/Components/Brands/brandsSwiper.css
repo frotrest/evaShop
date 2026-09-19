@@ -28,5 +28,19 @@
   .brands-swiper {
     padding-top: 24px !important;
     padding-bottom: 24px !important;
+    mask-image: linear-gradient(
+      to right,
+      transparent 0,
+      black 24px,
+      black calc(100% - 24px),
+      transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0,
+      black 24px,
+      black calc(100% - 24px),
+      transparent 100%
+    );
   }
 }

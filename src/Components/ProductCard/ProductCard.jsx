@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { lazy, useState, Suspense } from 'react';
 import clsx from 'clsx';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
@@ -6,9 +6,9 @@ import { IoHeart, IoHeartOutline, IoBagAddOutline, IoEyeOutline } from 'react-ic
 import { addToCart } from '../../store/slices/cartSlice';
 import { toggleWishlist } from '../../store/slices/wishlistSlice';
 import { showNotification } from '../../store/slices/notificationSlice';
-import QuickViewModal from '../QuickView/QuickViewModal';
 import styles from './ProductCard.module.css';
 import { selectWishlistItems } from '../../store/selectors';
+const QuickViewModal = lazy(() => import('../QuickView/QuickViewModal'));
 
 const ProductCard = ({ product = {} }) => {
   const dispatch = useDispatch();
@@ -146,11 +146,15 @@ const ProductCard = ({ product = {} }) => {
         </div>
       </div>
 
-      <QuickViewModal
-        isOpen={quickViewOpen}
-        onClose={() => setQuickViewOpen(false)}
-        product={product}
-      />
+      {quickViewOpen && (
+        <Suspense fallback={null}>
+          <QuickViewModal
+            isOpen={quickViewOpen}
+            onClose={() => setQuickViewOpen(false)}
+            product={product}
+          />
+        </Suspense>
+      )}
     </>
   );
 };

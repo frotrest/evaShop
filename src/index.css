@@ -119,22 +119,6 @@ textarea {
 
 @font-face {
   font-display: swap;
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  src: url('./fonts/roboto-v51-latin-regular.woff2') format('woff2');
-}
-
-@font-face {
-  font-display: swap;
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 900;
-  src: url('./fonts/roboto-v51-latin-900.woff2') format('woff2');
-}
-
-@font-face {
-  font-display: swap;
   font-family: 'Plus Jakarta Sans';
   font-style: normal;
   font-weight: 400;

@@ -19,6 +19,7 @@
 
 .announcementText {
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 12px;
   flex-wrap: wrap;
@@ -59,7 +60,7 @@
   color: #71717a;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 950px) {
   .announcementRight {
     display: none;
   }
@@ -227,8 +228,8 @@
 
 @media (max-width: 768px) {
   .actionBtn {
-    width: 36px;
-    height: 36px;
+    width: 30px;
+    height: 30px;
   }
 }
 
@@ -249,8 +250,8 @@
 
 .iconBadge {
   position: absolute;
-  top: 4px;
-  right: 4px;
+  top: -5px;
+  right: -5px;
   background-color: #b91c1c;
   color: #ffffff;
   font-family: 'Plus Jakarta Sans', sans-serif;

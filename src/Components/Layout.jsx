@@ -1,10 +1,10 @@
 import Header from './Header/Header.jsx';
 import Footer from './Footer/Footer.jsx';
-import CartDrawer from './CartDrawer/CartDrawer.jsx';
-import WishlistDrawer from './WishlistDrawer/WishlistDrawer.jsx';
 import ToastContainer from './Notification/ToastContainer.jsx';
 import { Outlet } from 'react-router-dom';
-import { Suspense } from 'react';
+import { lazy, Suspense } from 'react';
+const CartDrawer = lazy(() => import('./CartDrawer/CartDrawer.jsx'));
+const WishlistDrawer = lazy(() => import('./WishlistDrawer/WishlistDrawer.jsx'));
 
 export default function Layout() {
   return (
@@ -16,8 +16,10 @@ export default function Layout() {
         </Suspense>
       </main>
       <Footer />
-      <CartDrawer />
-      <WishlistDrawer />
+      <Suspense fallback={null}>
+        <CartDrawer />
+        <WishlistDrawer />
+      </Suspense>
       <ToastContainer />
     </>
   );
