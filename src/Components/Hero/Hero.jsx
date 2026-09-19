@@ -159,7 +159,6 @@ const Hero = () => {
                         src={item.urls[1]}
                         alt={item.title}
                         className={clsx(styles.secImg)}
-                        fetchPriority="high"
                       />
                       <div className={clsx(styles.stampBadge)}>
                         <span>EVA STUDIO</span>

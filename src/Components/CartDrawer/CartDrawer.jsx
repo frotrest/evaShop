@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { AnimatePresence, motion } from 'framer-motion';
 import { IoClose, IoTrashOutline, IoBagHandleOutline, IoCheckmarkCircle } from 'react-icons/io5';
 import { PiHandbagBold } from 'react-icons/pi';
-import confetti from 'canvas-confetti';
 import {
   closeCart,
   removeFromCart,
@@ -70,11 +69,6 @@ export default function CartDrawer() {
 
   const handleFinishCheckout = (e) => {
     e.preventDefault();
-    confetti({
-      particleCount: 100,
-      spread: 70,
-      origin: { y: 0.6 },
-    });
     setCheckoutSuccess(true);
     dispatch(clearCart());
     dispatch(

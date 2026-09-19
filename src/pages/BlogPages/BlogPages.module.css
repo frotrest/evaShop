@@ -68,7 +68,8 @@
 .metaBar {
   display: flex;
   align-items: center;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 12px 20px;
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 13px;
   color: #71717a;
@@ -182,7 +183,13 @@
   .title {
     font-size: 32px;
   }
+
   .leadParagraph {
     font-size: 18px;
+  }
+
+  .metaBar {
+    gap: 8px 14px;
+    font-size: 12px;
   }
 }

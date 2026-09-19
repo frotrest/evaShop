@@ -204,7 +204,7 @@ export default function Header() {
           <NavLink to="/" className={clsx(header.logoLink)}>
             <div className={clsx(header.logoWrap)}>
               <span className={clsx(header.logoTitle)}>EVA</span>
-              <span className={clsx(header.logoStudio)}>STUDIO</span>
+              <span className={clsx(header.logoStudio)}>SHOP</span>
             </div>
           </NavLink>
           <nav className={clsx(header.headerNav)} onMouseLeave={scheduleClose}>
@@ -472,7 +472,7 @@ export default function Header() {
               <div className={clsx(header.burgerHeader)}>
                 <div className={clsx(header.logoWrap)}>
                   <span className={clsx(header.logoTitle)}>EVA</span>
-                  <span className={clsx(header.logoStudio)}>STUDIO</span>
+                  <span className={clsx(header.logoStudio)}>SHOP</span>
                 </div>
                 <button className={clsx(header.burgerClose)} onClick={closeBurger}>
                   <IoClose size={24} />

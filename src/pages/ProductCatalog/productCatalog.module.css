@@ -4,7 +4,7 @@
   display: grid;
   grid-template-columns: 280px 1fr;
   gap: 40px;
-  padding: 48px 28px 80px;
+  padding-top: 48px;
   align-items: flex-start;
 }
 
@@ -22,6 +22,7 @@
 .catalogControlsRow {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
   padding-bottom: 16px;
@@ -79,7 +80,7 @@
 @media (max-width: 1024px) {
   .productCatalogWrapper {
     grid-template-columns: 1fr;
-    padding: 24px 16px 60px;
+    padding-top: 24px;
     gap: 24px;
   }
 
@@ -175,5 +176,11 @@
     font-size: 13px;
     font-weight: 600;
     cursor: pointer;
+  }
+}
+
+@media (max-width: 480px) {
+  .catalogControlsRow {
+    justify-content: center;
   }
 }
