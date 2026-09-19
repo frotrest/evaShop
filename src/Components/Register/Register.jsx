@@ -129,7 +129,7 @@ export default function Register() {
 
         <div className={clsx(registerStyles.cardWrapper)}>
           <div className={clsx(registerStyles.cardHeader)}>
-            <span className={clsx(registerStyles.cardSubhead)}>EVA STUDIO PRIVÉ</span>
+            <span className={clsx(registerStyles.cardSubhead)}>EVA SHOP PRIVÉ</span>
             <h1 className={clsx(registerStyles.title)}>CREATE YOUR ACCOUNT</h1>
             <p className={clsx(registerStyles.subtitle)}>
               Join our community for tailored recommendations, early sale access, and effortless

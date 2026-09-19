@@ -148,7 +148,7 @@ export default function Footer() {
           <div className={clsx(styles.brandCol)}>
             <Link to="/" className={clsx(styles.footerLogo)}>
               <span className={clsx(styles.logoTitle)}>EVA</span>
-              <span className={clsx(styles.logoStudio)}>STUDIO</span>
+              <span className={clsx(styles.logoStudio)}>SHOP</span>
             </Link>
             <p className={clsx(styles.brandBio)}>
               Curating elevated wardrobes, architectural cuts, and timeless craftsmanship for the
@@ -243,7 +243,7 @@ export default function Footer() {
             </div>
 
             <div className={clsx(styles.copyright)}>
-              © {new Date().getFullYear()} EVA STUDIO INC. ALL RIGHTS RESERVED.
+              © {new Date().getFullYear()} EVA SHOP INC. ALL RIGHTS RESERVED.
             </div>
 
             <div className={clsx(styles.paymentMethods)}>

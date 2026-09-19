@@ -175,7 +175,7 @@ const Hero = () => {
                         className={clsx(styles.secImg)}
                       />
                       <div className={clsx(styles.stampBadge)}>
-                        <span>EVA STUDIO</span>
+                        <span>EVA SHOP</span>
                         <strong>2026</strong>
                       </div>
                     </div>
