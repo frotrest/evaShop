@@ -8,7 +8,6 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 import './hero-settings.css';
 import styles from './hero.module.css';
-import Data from '../../data/photos.json';
 import { Link } from 'react-router-dom';
 import {
   IoArrowForward,
@@ -16,6 +15,14 @@ import {
   IoChevronForward,
   IoSparklesOutline,
 } from 'react-icons/io5';
+import summerPrimary from '@assets/HomePage/slider/summer-fashion-one.webp';
+import summerSecondary from '@assets/HomePage/slider/summer-fashion-second.webp';
+import casualPrimary from '@assets/HomePage/slider/casual-one.webp';
+import casualSecondary from '@assets/HomePage/slider/casual-second.webp';
+import winterPrimary from '@assets/HomePage/slider/winter-collection-one.webp';
+import winterSecondary from '@assets/HomePage/slider/winter-collection-second.webp';
+import holidayPrimary from '@assets/HomePage/slider/holiday-one.webp';
+import holidaySecondary from '@assets/HomePage/slider/holiday-second.webp';
 
 const SLIDES_CONTENT = [
   {
@@ -26,6 +33,8 @@ const SLIDES_CONTENT = [
     offer: 'GET 30% OFF',
     lookName: 'Sculpted Linen Trench',
     lookPrice: '$315.00',
+    primaryImg: summerPrimary,
+    secondaryImg: summerSecondary,
   },
   {
     tag: 'EXCLUSIVE ARCHIVE',
@@ -35,6 +44,8 @@ const SLIDES_CONTENT = [
     offer: '40% OFF STOREWIDE',
     lookName: 'Double-Breasted Wool Coat',
     lookPrice: '$420.00',
+    primaryImg: winterPrimary,
+    secondaryImg: winterSecondary,
   },
   {
     tag: 'NEW MINIMALISM',
@@ -44,6 +55,8 @@ const SLIDES_CONTENT = [
     offer: 'SPECIAL EDITION',
     lookName: 'Monochrome Set',
     lookPrice: '$180.00',
+    primaryImg: casualPrimary,
+    secondaryImg: casualSecondary,
   },
   {
     tag: 'HOLIDAY CAPSULE',
@@ -53,6 +66,8 @@ const SLIDES_CONTENT = [
     offer: 'LIMITED DROP',
     lookName: 'Tailored Silk Blazer',
     lookPrice: '$290.00',
+    primaryImg: holidayPrimary,
+    secondaryImg: holidaySecondary,
   },
 ];
 
@@ -88,10 +103,9 @@ const Hero = () => {
         speed={700}
         className={clsx(styles.heroSwiper)}
       >
-        {Data.data.map((item, index) => {
-          const content = SLIDES_CONTENT[index] || SLIDES_CONTENT[0];
+        {SLIDES_CONTENT.map((content, index) => {
           return (
-            <SwiperSlide key={item._id}>
+            <SwiperSlide key={index}>
               <div className={clsx(styles.slideContainer)}>
                 <div className={clsx(styles.contentCol)}>
                   <div className={clsx(styles.tagBadge)}>
@@ -142,8 +156,8 @@ const Hero = () => {
                   <div className={clsx(styles.imageStage)}>
                     <div className={clsx(styles.primaryImgWrap)}>
                       <img
-                        src={item.urls[0]}
-                        alt={item.title}
+                        src={content.primaryImg}
+                        alt={`img-${index + 1}`}
                         className={clsx(styles.mainImg)}
                         fetchPriority="high"
                       />
@@ -156,8 +170,8 @@ const Hero = () => {
 
                     <div className={clsx(styles.secondaryImgWrap)}>
                       <img
-                        src={item.urls[1]}
-                        alt={item.title}
+                        src={content.secondaryImg}
+                        alt={`sub-img-${index + 1}`}
                         className={clsx(styles.secImg)}
                       />
                       <div className={clsx(styles.stampBadge)}>
