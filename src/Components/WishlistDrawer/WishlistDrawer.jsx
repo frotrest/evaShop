@@ -6,10 +6,23 @@ import { addToCart } from '../../store/slices/cartSlice';
 import { showNotification } from '../../store/slices/notificationSlice';
 import styles from './WishlistDrawer.module.css';
 import clsx from 'clsx';
+import { selectWishlist } from '../../store/selectors';
+import { useEffect } from 'react';
 
 export default function WishlistDrawer() {
   const dispatch = useDispatch();
-  const { items, isOpen } = useSelector((state) => state.wishlist);
+  const { items, isOpen } = useSelector(selectWishlist);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
 
   const handleMoveToCart = (product) => {
     dispatch(
