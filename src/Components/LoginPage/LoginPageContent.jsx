@@ -113,7 +113,7 @@ const LoginMain = () => {
 
         <div className={clsx(styles.cardWrapper)}>
           <div className={clsx(styles.cardHeader)}>
-            <span className={clsx(styles.cardSubhead)}>EVA STUDIO PRIVÉ</span>
+            <span className={clsx(styles.cardSubhead)}>EVA SHOP PRIVÉ</span>
             <h1 className={clsx(styles.loginTitle)}>SIGN IN TO YOUR ACCOUNT</h1>
             <p className={clsx(styles.loginSubtitle)}>
               Access your personalized edits, saved wishlist items, and order history.
