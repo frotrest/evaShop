@@ -22,8 +22,6 @@ export default function QuickViewModal({ product, isOpen, onClose }) {
   const wishlistItems = useSelector(selectWishlistItems);
   const [selectedSize, setSelectedSize] = useState('M');
 
-  const rootModal = document.getElementById('root-modal');
-
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -41,6 +39,9 @@ export default function QuickViewModal({ product, isOpen, onClose }) {
   }, [isOpen, onClose]);
 
   if (!product || typeof document === 'undefined') return null;
+
+  const rootModal = document.getElementById('root-modal');
+  if (!rootModal) return null;
 
   const productId = product.id ?? product._id;
   const isWishlisted = wishlistItems.some(
@@ -99,6 +100,7 @@ export default function QuickViewModal({ product, isOpen, onClose }) {
           className={clsx(styles.modalOverlay)}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
+          transition={{ duration: 0.2 }}
           exit={{ opacity: 0 }}
           onClick={onClose}
         >
