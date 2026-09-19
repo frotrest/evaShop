@@ -42,6 +42,8 @@ export default function ProductPage() {
   const [selectedSize, setSelectedSize] = useState('');
   const [quantity, setQuantity] = useState(1);
   const mainSwiperRef = useRef(null);
+  const recommendationsPrevRef = useRef(null);
+  const recommendationsNextRef = useRef(null);
 
   const accordionVariants = {
     open: { height: 'auto', opacity: 1 },
@@ -531,8 +533,16 @@ export default function ProductPage() {
           </div>
         </div>
       </Container>
-      <ProductCardList title="You May Also Like">
-        <ProductCardSwiper swiperId="cardSwiper" />
+      <ProductCardList
+        title="You May Also Like"
+        prevRef={recommendationsPrevRef}
+        nextRef={recommendationsNextRef}
+      >
+        <ProductCardSwiper
+          swiperId="cardSwiper"
+          prevRef={recommendationsPrevRef}
+          nextRef={recommendationsNextRef}
+        />
       </ProductCardList>
     </>
   );
