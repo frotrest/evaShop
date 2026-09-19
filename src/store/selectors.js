@@ -6,6 +6,7 @@ export const selectIsAuthLoading = (state) => state.loginSlice.loading;
 const selectProductsSlice = (state) => state.products;
 const selectOtherProductsSlice = (state) => state.otherProducts;
 export const selectCart = (state) => state.cart;
+export const selectWishlist = (state) => state.wishlist;
 
 export const selectBaseProducts = (state) => state.products.items;
 const selectOtherProducts = (state) => state.otherProducts.items;

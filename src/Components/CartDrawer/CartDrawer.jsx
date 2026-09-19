@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { AnimatePresence, motion } from 'framer-motion';
 import { IoClose, IoTrashOutline, IoBagHandleOutline, IoCheckmarkCircle } from 'react-icons/io5';
@@ -30,6 +30,17 @@ export default function CartDrawer() {
     address: user?.[0]?.address || '',
     cardNumber: '•••• •••• •••• 4242',
   });
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
 
   const subtotal = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
   const discountAmount = subtotal * discountPercent;
