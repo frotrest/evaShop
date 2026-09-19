@@ -57,7 +57,6 @@ const cartSlice = createSlice({
           quantity: initialQuantity,
         });
       }
-      state.isOpen = true;
     },
     removeFromCart: (state, action) => {
       state.items = state.items.filter(
