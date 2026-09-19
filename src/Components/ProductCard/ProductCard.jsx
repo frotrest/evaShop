@@ -8,11 +8,14 @@ import { toggleWishlist } from '../../store/slices/wishlistSlice';
 import { showNotification } from '../../store/slices/notificationSlice';
 import styles from './ProductCard.module.css';
 import { selectWishlistItems } from '../../store/selectors';
+
 const QuickViewModal = lazy(() => import('../QuickView/QuickViewModal'));
 
 const ProductCard = ({ product = {} }) => {
   const dispatch = useDispatch();
   const wishlistItems = useSelector(selectWishlistItems);
+
+  const [hasOpened, setHasOpened] = useState(false);
   const [quickViewOpen, setQuickViewOpen] = useState(false);
   const [imgLoaded, setImgLoaded] = useState(false);
 
@@ -73,6 +76,7 @@ const ProductCard = ({ product = {} }) => {
   const handleQuickViewClick = (e) => {
     e.preventDefault();
     e.stopPropagation();
+    setHasOpened(true);
     setQuickViewOpen(true);
   };
 
@@ -146,7 +150,7 @@ const ProductCard = ({ product = {} }) => {
         </div>
       </div>
 
-      {quickViewOpen && (
+      {hasOpened && (
         <Suspense fallback={null}>
           <QuickViewModal
             isOpen={quickViewOpen}
