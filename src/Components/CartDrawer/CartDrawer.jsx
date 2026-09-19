@@ -25,11 +25,35 @@ export default function CartDrawer() {
   const [isCheckingOut, setIsCheckingOut] = useState(false);
   const [checkoutSuccess, setCheckoutSuccess] = useState(false);
   const [formData, setFormData] = useState({
-    name: user?.[0]?.firstName ? `${user[0].firstName} ${user[0].lastName || ''}`.trim() : '',
-    email: user?.[0]?.email || '',
-    address: user?.[0]?.address || '',
+    name: '',
+    email: '',
+    address: '',
     cardNumber: '•••• •••• •••• 4242',
   });
+
+  useEffect(() => {
+    if (user) {
+      const userData = Array.isArray(user) ? user[0] : user;
+      if (userData) {
+        const addressObj = userData.address;
+        const formattedAddress =
+          addressObj && typeof addressObj === 'object'
+            ? [addressObj.street, addressObj.city, addressObj.zip, addressObj.country]
+                .filter(Boolean)
+                .join(', ')
+            : addressObj || '';
+
+        setFormData({
+          name: userData.firstName
+            ? `${userData.firstName} ${userData.lastName || ''}`.trim()
+            : userData.name || '',
+          email: userData.email || '',
+          address: formattedAddress,
+          cardNumber: '•••• •••• •••• 4242',
+        });
+      }
+    }
+  }, [user]);
 
   useEffect(() => {
     if (isOpen) {
