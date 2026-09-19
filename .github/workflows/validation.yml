@@ -36,7 +36,7 @@ jobs:
 
       - name: Informer
         if: failure()
-        run: echo "Lint stage has fallen"
+        run: echo "Lint stage has fallen"  
 
       - name: Build
         run: npm run build
