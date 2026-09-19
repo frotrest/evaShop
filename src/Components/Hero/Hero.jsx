@@ -155,11 +155,7 @@ const Hero = () => {
                     </div>
 
                     <div className={clsx(styles.secondaryImgWrap)}>
-                      <img
-                        src={item.urls[1]}
-                        alt={item.title}
-                        className={clsx(styles.secImg)}
-                      />
+                      <img src={item.urls[1]} alt={item.title} className={clsx(styles.secImg)} />
                       <div className={clsx(styles.stampBadge)}>
                         <span>EVA STUDIO</span>
                         <strong>2026</strong>
