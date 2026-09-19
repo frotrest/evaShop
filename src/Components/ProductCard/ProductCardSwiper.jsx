@@ -8,7 +8,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import axios from 'axios';
 
-const ProductCardSwiper = ({ swiperId = 'default', categoryFilter = null }) => {
+const ProductCardSwiper = ({ swiperId = 'default', categoryFilter = null, prevRef, nextRef }) => {
   const [products, setProducts] = useState([]);
 
   const prevClass = `swiper-button-prev-${swiperId}`;
@@ -53,26 +53,22 @@ const ProductCardSwiper = ({ swiperId = 'default', categoryFilter = null }) => {
           pauseOnMouseEnter: true,
         }}
         breakpoints={{
-          0: {
-            slidesPerView: 1.25,
-            spaceBetween: 14,
-          },
-          480: {
-            slidesPerView: 2,
-            spaceBetween: 16,
-          },
-          768: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-          },
-          1120: {
-            slidesPerView: 4,
-            spaceBetween: 24,
-          },
+          0: { slidesPerView: 1.25, spaceBetween: 14 },
+          480: { slidesPerView: 2, spaceBetween: 16 },
+          768: { slidesPerView: 3, spaceBetween: 20 },
+          1120: { slidesPerView: 4, spaceBetween: 24 },
         }}
         navigation={{
-          nextEl: `.${nextClass}`,
-          prevEl: `.${prevClass}`,
+          nextEl: nextRef?.current ? nextRef.current : `.${nextClass}`,
+          prevEl: prevRef?.current ? prevRef.current : `.${prevClass}`,
+        }}
+        onInit={(swiper) => {
+          if (prevRef?.current && nextRef?.current) {
+            swiper.params.navigation.prevEl = prevRef.current;
+            swiper.params.navigation.nextEl = nextRef.current;
+            swiper.navigation.init();
+            swiper.navigation.update();
+          }
         }}
         modules={[Navigation, Autoplay]}
       >

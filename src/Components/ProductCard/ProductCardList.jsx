@@ -9,6 +9,8 @@ const ProductCardList = ({
   viewAllLink = '/catalog',
   children,
   swiperId = 'default',
+  prevRef,
+  nextRef,
 }) => {
   return (
     <section className={clsx(styles.list)}>
@@ -39,8 +41,18 @@ const ProductCardList = ({
           )}
 
           <div className={clsx(styles.nav)}>
-            <button className={clsx(styles.btnPrev, `swiper-button-prev-${swiperId}`)}>←</button>
-            <button className={clsx(styles.btnNext, `swiper-button-next-${swiperId}`)}>→</button>
+            <button
+              ref={prevRef}
+              className={clsx(styles.btnPrev, !prevRef && `swiper-button-prev-${swiperId}`)}
+            >
+              ←
+            </button>
+            <button
+              ref={nextRef}
+              className={clsx(styles.btnNext, !nextRef && `swiper-button-next-${swiperId}`)}
+            >
+              →
+            </button>
           </div>
         </div>
       </div>
