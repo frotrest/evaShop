@@ -52,10 +52,10 @@ Performance was treated as an explicit goal, not an afterthought. Key optimizati
 
 **Lighthouse results** (after optimization, median of several runs):
 
-| Profile | Performance | LCP | TBT | CLS |
-|---|---|---|---|---|
-| Mobile | ~88 | ~3.3s | ~90ms | 0 |
-| Desktop | ~100 | — | — | 0 |
+| Profile | Performance | LCP   | TBT   | CLS |
+| ------- | ----------- | ----- | ----- | --- |
+| Mobile  | ~88         | ~3.3s | ~90ms | 0   |
+| Desktop | ~100        | —     | —     | 0   |
 
 The mobile score is capped mainly by the inherent limits of a client-side-rendered (CSR) React SPA — the browser can't discover the LCP image until the JS bundle has been downloaded and executed, since there's no server-side rendering. Getting meaningfully closer to 100 on mobile would require a framework with SSR/SSG (e.g. Next.js, Astro), which was out of scope for this project.
 
